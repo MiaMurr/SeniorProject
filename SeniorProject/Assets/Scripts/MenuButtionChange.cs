@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuButtionChange : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string type = "0";
+    public string sceneName;
+    void OnMouseUpAsButton()
     {
         
-    }
+        if (type.Equals("level"))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (type == "quite")
+        {
+            Application.Quit();
+        }
     }
+    
+    
+    
+    
 }
