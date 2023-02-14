@@ -15,7 +15,7 @@ public class MenuButtionChange : MonoBehaviour
             SceneManager.LoadScene(sceneName);
         }
 
-        if (type == "quite")
+        if (type.Equals( "quite"))
         {
             Application.Quit();
         }
