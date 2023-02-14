@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Snakebuttion : MonoBehaviour
+public class VolumeSetting : MonoBehaviour
 {
     // Start is called before the first frame update
-    public string sceneName;
     void Start()
     {
         
     }
 
-    private void OnMouseUpAsButton()
+    // Update is called once per frame
+    void Update()
     {
-        SceneManager.LoadScene(sceneName);
+        
     }
 }

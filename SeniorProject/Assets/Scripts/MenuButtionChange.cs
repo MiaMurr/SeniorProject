@@ -7,6 +7,8 @@ public class MenuButtionChange : MonoBehaviour
 {
     public string type = "0";
     public string sceneName;
+    [SerializeField] protected GameObject presentMenu;
+    [SerializeField] protected GameObject nextMenu ;
     void OnMouseUpAsButton()
     {
         
@@ -15,9 +17,15 @@ public class MenuButtionChange : MonoBehaviour
             SceneManager.LoadScene(sceneName);
         }
 
-        if (type.Equals( "quite"))
+        if (type.Equals("quite"))
         {
             Application.Quit();
+        }
+
+        if (type.Equals("menuChange"))
+        {
+            presentMenu.gameObject.SetActive(false);
+            nextMenu.SetActive(true);
         }
     }
     
