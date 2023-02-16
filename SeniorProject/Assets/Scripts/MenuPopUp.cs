@@ -32,8 +32,20 @@ public class MenuPopUp : MonoBehaviour
             SetScreen.SetActive(false);
 
         }
-    
-    
-    
+
+        if (SetScreen.activeInHierarchy == true)
+        {
+
+            SetScreen.SetActive(false);
+
+        }
+        else
+        {
+
+            SetScreen.SetActive(true);
+
+        }
+
+
     }
 }
