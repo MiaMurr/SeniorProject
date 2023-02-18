@@ -11,17 +11,17 @@ public class MenuPopUp : MonoBehaviour
 
     public void ButtonClicked(){
 
-        if (SetScreen.activeInHierarchy == false)
-        {
+        //if (SetScreen.activeInHierarchy == false)
+        //{
 
-            SetScreen.SetActive(true);
+        //    SetScreen.SetActive(true);
 
-        }
-        else {
+        //}
+        //else {
 
-            SetScreen.SetActive(false);
+        //    SetScreen.SetActive(false);
 
-        }
+        //}
 
         if (SetScreen.activeInHierarchy == true)
         {
