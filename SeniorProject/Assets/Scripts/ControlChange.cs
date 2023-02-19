@@ -7,13 +7,16 @@ using UnityEngine.InputSystem;
 
 public class ControlChange : MonoBehaviour
 {
-    
-    [SerializeField] private GameObject RebindButtion;
-    [SerializeField] private GameObject Rebindingwaiting;
+    [SerializeField] private PlayerInput input = null;
+    [SerializeField] private GameObject RebindButtion = null;
+    [SerializeField] private GameObject Rebindingwaiting = null;
     [SerializeField] private InputActionReference MoveUP = null;
     [SerializeField] private TMP_Text displayButtion = null;
     private InputActionRebindingExtensions.RebindingOperation rebindingOperation;
 
+    private void Start()
+    {
+    }
     void OnMouseUpAsButton()
     {
         Rebinding();
@@ -22,7 +25,9 @@ public class ControlChange : MonoBehaviour
     {
         RebindButtion.SetActive(false);
         Rebindingwaiting.SetActive(true);
-        rebindingOperation = MoveUP.action.PerformInteractiveRebinding().WithControlsExcluding("Mouse")
+        input.SwitchCurrentActionMap("Menu");
+
+        rebindingOperation = MoveUP.action.PerformInteractiveRebinding()
             .OnMatchWaitForAnother(0.1f)
             .WithControlsExcluding("Mouse")
             .OnComplete(operation => RebindDone())
@@ -32,12 +37,13 @@ public class ControlChange : MonoBehaviour
     private void RebindDone()
     {
         int BidingIndex = MoveUP.action.GetBindingIndexForControl(MoveUP.action.controls[0]);
-        displayButtion.text = InputControlPath.ToHumanReadableString(MoveUP.action.bindings[0].effectivePath,
+        displayButtion.text = InputControlPath.ToHumanReadableString(MoveUP.action.bindings[BidingIndex].effectivePath,
             InputControlPath.HumanReadableStringOptions.OmitDevice);
 
 
-        RebindButtion.SetActive(false);
-        Rebindingwaiting.SetActive(true);
+        RebindButtion.SetActive(true);
+        Rebindingwaiting.SetActive(false);
+        input.SwitchCurrentActionMap("MenuGameplay");
         rebindingOperation.Dispose();
     }
 }

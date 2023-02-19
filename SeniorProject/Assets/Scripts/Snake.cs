@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+//using UnityEngine.Windows;
 
 public class Snake : MonoBehaviour
 {
 
     private Vector3 _direction = Vector3.right;
+
+    
 
     private List<Transform> _segments = new List<Transform>();
 
@@ -18,10 +22,17 @@ public class Snake : MonoBehaviour
         //_segments = new List<Transform>();
         //_segments.Add(this.transform);
         ResetState();
+        Application.targetFrameRate = 30;
     }
-
-    private void Update()
+    
+    /*public void OnMovement(InputValue input)
     {
+        
+        _direction = input.Get<Vector3>();
+    }*/
+
+     private void Update()
+     {
         if (Input.GetKeyDown(KeyCode.W))
         {
             _direction = Vector3.up;
@@ -38,8 +49,9 @@ public class Snake : MonoBehaviour
         {
             _direction = Vector3.right;
         }
-
+        
     }
+
 
     private void FixedUpdate()
     {
