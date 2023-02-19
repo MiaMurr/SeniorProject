@@ -19,16 +19,17 @@ public class Snake : MonoBehaviour
 
     private void Start()
     {
-        //_segments = new List<Transform>();
-        //_segments.Add(this.transform);
+        _segments = new List<Transform>();
+        _segments.Add(this.transform);
         ResetState();
-        Application.targetFrameRate = 30;
+        Application.targetFrameRate = 30;//make sure that the game does not run at crazy speeds
     }
     
-    /*public void OnMovement(InputValue input)
+    /*public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
+     //relating to buttion behavoiour
     {
         
-        _direction = input.Get<Vector3>();
+        _direction = input.Get<Vector3>(); // WASD is connected to a certian direction of vector 3.
     }*/
 
      private void Update()
