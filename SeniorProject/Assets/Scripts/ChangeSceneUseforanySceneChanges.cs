@@ -9,4 +9,12 @@ public class ChangeSceneUseforanySceneChanges : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void GameOver()
+    {
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SnakeScore.score = 0f;
+    }
+
 }

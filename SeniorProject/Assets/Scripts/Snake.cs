@@ -6,10 +6,13 @@ using UnityEngine.InputSystem;
 
 public class Snake : MonoBehaviour
 {
+    public GameObject SnakePlayer;
+    public GameObject GameOver;
+    public GameObject HideScore;
+    public GameObject HideHome;
+    public GameObject HideHighScore;
 
     private Vector3 _direction = Vector3.right;
-
-    
 
     private List<Transform> _segments = new List<Transform>();
 
@@ -77,7 +80,8 @@ public class Snake : MonoBehaviour
 
      private void ResetState()
     {
-        for (int i =1; i < _segments.Count; i++)
+
+        for (int i = 1; i < _segments.Count; i++)
         {
             Destroy(_segments[i].gameObject);
         }
@@ -103,6 +107,12 @@ public class Snake : MonoBehaviour
         }
         else if (other.tag == "Obstacle")
         {
+            // Game Over Screen 
+            SnakePlayer.SetActive(false);
+            HideScore.SetActive(false);
+            HideHighScore.SetActive(false);
+            HideHome.SetActive(false);
+            GameOver.SetActive(true);
             ResetState();
         }
 

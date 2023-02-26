@@ -7,6 +7,10 @@ TagManager:
   - SettingsMenu
   - Food
   - Obstacle
+  - ScoreDisplay
+  - HighScore
+  - UserScoreD
+  - UserHighSD
   layers:
   - Default
   - TransparentFX
