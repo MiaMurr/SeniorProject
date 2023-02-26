@@ -10,7 +10,7 @@ public class Food : MonoBehaviour
     public float ScoreValue = 10f;
 
     private void Start() {
-
+        SnakeScore.score = 0f;
         RandomLocation();
     }
 
