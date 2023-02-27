@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01485719, g: 0.008939541, b: 0.072804675, a: 1}
+  m_IndirectSpecularColor: {r: 0.014822562, g: 0.008969646, b: 0.072823144, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 30301808}
   - component: {fileID: 30301807}
   - component: {fileID: 30301806}
-  - component: {fileID: 30301805}
   - component: {fileID: 30301810}
   m_Layer: 0
   m_Name: snakeLevel
@@ -144,18 +143,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &30301805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30301804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 271cd7abd90f0444e8040628051a800b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &30301806
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2931,7 +2918,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4197,6 +4184,7 @@ GameObject:
   - component: {fileID: 903914231}
   - component: {fileID: 903914230}
   - component: {fileID: 903914233}
+  - component: {fileID: 903914234}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4366,6 +4354,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &903914234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903914229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b39946ee6970a4ebfcff1e72143b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &945668066
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,14 +5686,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1171389681}
-  - component: {fileID: 1171389682}
   m_Layer: 0
   m_Name: settings menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1171389681
 Transform:
   m_ObjectHideFlags: 0
@@ -5713,18 +5712,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1171389682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171389680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4bc01032fd565d42a06299b3ea8806a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1183413366
 GameObject:
   m_ObjectHideFlags: 0
@@ -7423,7 +7410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1718635453
 Transform:
   m_ObjectHideFlags: 0
@@ -8696,7 +8683,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
