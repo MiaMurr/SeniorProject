@@ -28,6 +28,8 @@ public class userLoading : MonoBehaviour
 
     public string InputUsername;
     public string InputPassword;
+    private int lineinText = 0;
+    private string copy;
     
     int counter = 0;
 
@@ -52,22 +54,39 @@ public class userLoading : MonoBehaviour
     //    ReadString(paths);
         
     //}
-    void WriteString(string path)
+    public void WriteString()
     {
-        
-        StreamWriter writer = new StreamWriter(path, true);
-        //writer.WriteLine("Test");
-        writer.Close();
+        string[]Lines = System.IO.File.ReadAllLines(paths);
+        username = PlayerPrefs.GetString("username");
+        password = PlayerPrefs.GetString("password");
+        brightness = PlayerPrefs.GetFloat("Brightness");
+        sound = PlayerPrefs.GetFloat("volume");
+        snakeup = PlayerPrefs.GetString("snakeup");
+        snakedown = PlayerPrefs.GetString("snakedown");
+        snakeleft = PlayerPrefs.GetString("snakeleft");
+        snakeright = PlayerPrefs.GetString("snakeright");
+        snakeScore1 = PlayerPrefs.GetFloat("HighScore");
+        snakeScore2 = PlayerPrefs.GetFloat("HighScore2");
+        snakeScore3 = PlayerPrefs.GetFloat("HighScore3");
+        copy = username +";"+ password +";" + brightness + ";" + sound + ";" +snakeup + ";" +
+            snakedown + ";" + snakeleft + ";" + snakeright + ";" +snakeScore1 + ";" +
+            snakeScore2 + ";" +snakeScore3;
+        Lines[lineinText] = copy;
+        File.WriteAllLines(paths,Lines);
+        //StreamWriter writer = new StreamWriter(path, true);
+        ////writer.WriteLine("Test");
+        //writer.Close();
     }
 
 
     void ReadString(string path)
     {
-        
+        // will read the file line by line
         foreach (string line in File.ReadAllLines(path))
         {
             string[] data = line.Split(';');
 
+            // assigning all the variables
             username = data[0];
             password = data[1];
             float.TryParse(data[2],out brightness);
@@ -79,7 +98,7 @@ public class userLoading : MonoBehaviour
             float.TryParse(data[8], out snakeScore1);
             float.TryParse(data[9], out snakeScore2);
             float.TryParse(data[10], out snakeScore3);
-            counter++;
+            
             //for testing----------------------------------
             InputUsername = username;
             InputPassword = password;
@@ -87,6 +106,7 @@ public class userLoading : MonoBehaviour
             bool nametest = InputUsername.Equals(username);
             bool passtest = InputPassword.Equals(password);
             
+            // if it is a match then change values
             if (username == InputUsername)
             {
                 Debug.Log("it's finally working");
@@ -99,16 +119,22 @@ public class userLoading : MonoBehaviour
 
             if (nametest == true && passtest == true)
             {
+
                 PlayerPrefs.SetString("username", username);
+                PlayerPrefs.SetString("password", password);
                 PlayerPrefs.SetFloat("Brightness", brightness);
                 PlayerPrefs.SetFloat("volume", sound);
                 PlayerPrefs.SetInt("soundIn", 1);
-                //snakeup
-                //snakedown
-                //snakeleft
-                //snakeright
-                PlayerPrefs.SetFloat("HighScore", sound);
+                PlayerPrefs.SetString("snakeup,", snakeup);
+                PlayerPrefs.SetString("snakedown", snakedown);
+                PlayerPrefs.SetString("snakeleft", snakeleft);
+                PlayerPrefs.SetString("snakeright", snakeright);
+                PlayerPrefs.SetFloat("HighScore", snakeScore1);
+                PlayerPrefs.SetFloat("HighScore2", snakeScore2);
+                PlayerPrefs.SetFloat("HighScore3", snakeScore3);
 
+                // saved line location
+                lineinText = counter;
             }
             else
             {
@@ -117,8 +143,10 @@ public class userLoading : MonoBehaviour
                 Debug.Log("not the same");
             }
 
-            
+            counter++;
         }
         
     }
+
+    
 }
