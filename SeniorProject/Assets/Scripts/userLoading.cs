@@ -6,48 +6,54 @@ using System.IO;
 using System;
 using System.Reflection;
 using UnityEngine.UI;
+using TMPro;
+using System.ComponentModel;
 //using System.Diagnostics;
 
 public class userLoading : MonoBehaviour
 {
 
-    string paths = "Assets/Data/userD.txt";
-    string username;
-    string password;
-    float brightness;
-    float sound;
-    string snakeup;
-    string snakedown;
-    string snakeleft;
-    string snakeright;
-    string snakeScore1;
-    string snakeScore2;
-    string snakeScore3;
+    private string paths = "Assets/Data/userD.txt";
+    private string username;
+    private string password;
+    private float brightness;
+    private float sound;
+    private string snakeup;
+    private string snakedown;
+    private string snakeleft;
+    private string snakeright;
+    private float snakeScore1;
+    private float snakeScore2;
+    private float snakeScore3;
 
     public string InputUsername;
     public string InputPassword;
     
     int counter = 0;
 
-    [SerializeField] public GameObject userName;
-    [SerializeField] public GameObject userPassword;
+    public TMP_Text userName;
+    public TMP_Text userPassword;
+    
 
-    //public void ButtonClicked()
-    //{
-    //    InputUsername = userName.GetComponent<Text>().text;
-    //    InputPassword = userPassword.GetComponent<Text>().text;
-    //    //Debug.Log("first " + InputUsername);
-    //    //Debug.Log("second" + InputPassword);
-    //    //ReadString(paths);
-    //}
-
-    private void Start()
+    public void ButtonClicked()
     {
-        
-        WriteString(paths);
+        //InputPassword = userPassword.GetComponent<TMP_Text>().text;
+        userName = GameObject.FindWithTag("UserText").GetComponent<TMP_Text>();
+        userPassword = GameObject.FindWithTag("PassText").GetComponent<TMP_Text>();
+        InputUsername = userName.text;
+        InputPassword = userPassword.text;
+        Debug.Log("first " + InputUsername);
+        Debug.Log("second" + InputPassword);
         ReadString(paths);
-        
     }
+
+    //private void Start()
+    //{
+        
+    //    WriteString(paths);
+    //    ReadString(paths);
+        
+    //}
     void WriteString(string path)
     {
         
@@ -72,9 +78,9 @@ public class userLoading : MonoBehaviour
             snakedown = data[5];
             snakeleft = data[6];
             snakeright = data[7];
-            snakeScore1 = data[8];
-            snakeScore2 = data[9];
-            snakeScore3 = data[10];
+            float.TryParse(data[8], out snakeScore1);
+            float.TryParse(data[9], out snakeScore2);
+            float.TryParse(data[10], out snakeScore3);
             Debug.Log(counter);
             counter++;
 
@@ -83,6 +89,12 @@ public class userLoading : MonoBehaviour
                 PlayerPrefs.SetString("username", username);
                 PlayerPrefs.SetFloat("Brightness", brightness);
                 PlayerPrefs.SetFloat("volume", sound);
+                //snakeup
+                //snakedown
+                //snakeleft
+                //snakeright
+                PlayerPrefs.SetFloat("HighScore", sound);
+
             }
 
             

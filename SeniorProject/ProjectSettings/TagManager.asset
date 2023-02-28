@@ -7,6 +7,8 @@ TagManager:
   - SettingsMenu
   - Food
   - Obstacle
+  - UserText
+  - PassText
   layers:
   - Default
   - TransparentFX
