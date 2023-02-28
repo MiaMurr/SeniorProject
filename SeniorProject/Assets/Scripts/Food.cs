@@ -8,9 +8,11 @@ public class Food : MonoBehaviour
     public BoxCollider GridView;
     //Here you can set the value of the snake food Item
     public float ScoreValue = 10f;
+    
 
     private void Start() {
         SnakeScore.score = 0f;
+        SnakeScore.Lives = 3f;
         RandomLocation();
     }
 

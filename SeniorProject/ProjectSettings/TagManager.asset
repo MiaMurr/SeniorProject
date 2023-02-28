@@ -11,6 +11,10 @@ TagManager:
   - HighScore
   - UserScoreD
   - UserHighSD
+  - Life1
+  - Life2
+  - Life3
+  - NumOfLives
   layers:
   - Default
   - TransparentFX

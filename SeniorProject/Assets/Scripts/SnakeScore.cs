@@ -9,6 +9,8 @@ public class SnakeScore : MonoBehaviour
 {
     // Start current score at zero
     public static float score = 0f;
+    public static float Lives = 3f;
+
 
     // Current Score
     public TMP_Text displyTxt;
@@ -22,6 +24,8 @@ public class SnakeScore : MonoBehaviour
     //LeaderBoard display
     public TMP_Text LeadTxt;
 
+    //Lives display
+    public TMP_Text LivesTxt;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +58,13 @@ public class SnakeScore : MonoBehaviour
             LeadTxt = GameObject.FindWithTag("UserHighSD")
                 .GetComponent<TMP_Text>();
         }
+
+        if (LivesTxt == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            LivesTxt = GameObject.FindWithTag("NumOfLives")
+                .GetComponent<TMP_Text>();
+        }
         //Manually sets the high score to zero, just make sure to comment it out after you run once or scoring won't work
         //PlayerPrefs.SetFloat("HighScore", 0);
 
@@ -71,6 +82,7 @@ public class SnakeScore : MonoBehaviour
 
         EndTxt.text = " " + score;
 
+        LivesTxt.text = " " + Lives;
         // Go into the local player preferences and find the highest score,
         // check if the current is greater than the highest
         if (score > PlayerPrefs.GetFloat("HighScore", 0))

@@ -11,6 +11,10 @@ public class Snake : MonoBehaviour
     public GameObject HideScore;
     public GameObject HideHome;
     public GameObject HideHighScore;
+    public GameObject Life1;
+    public GameObject Life2;
+    public GameObject Life3;
+    public int LossLif = 1;
 
     private Vector3 _direction = Vector3.right;
 
@@ -107,12 +111,61 @@ public class Snake : MonoBehaviour
         }
         else if (other.tag == "Obstacle")
         {
-            // Game Over Screen 
-            SnakePlayer.SetActive(false);
-            HideScore.SetActive(false);
-            HideHighScore.SetActive(false);
-            HideHome.SetActive(false);
-            GameOver.SetActive(true);
+
+            switch (SnakeScore.Lives)
+            {
+
+                case 3:
+                    SnakeScore.Lives -= LossLif;
+                    Life1.SetActive(false);
+                    break;
+                case 2:
+                    SnakeScore.Lives -= LossLif;
+                    Life2.SetActive(false);
+                    break;
+                case 1:
+                    SnakeScore.Lives -= LossLif;
+                    Life3.SetActive(false);
+                    break;
+                case 0:
+                    // Game Over Screen
+                    SnakePlayer.SetActive(false);
+                    HideScore.SetActive(false);
+                    HideHighScore.SetActive(false);
+                    HideHome.SetActive(false);
+                    GameOver.SetActive(true);
+                    break;
+                default:
+                    break;
+            }
+            //if (SnakeScore.Lives <= 3f)
+            //{
+            //    SnakeScore.Lives -= LossLif;
+            //    Life1.SetActive(false);
+            //}
+            //else if (SnakeScore.Lives <= 2f)
+            //{
+            //    SnakeScore.Lives -= LossLif;
+            //    Life2.SetActive(false);
+            //}
+            //else if (SnakeScore.Lives <= 1f)
+            //{
+            //    SnakeScore.Lives -= LossLif;
+            //    Life3.SetActive(false);
+            //}
+            //else if (SnakeScore.Lives <= 0f)
+            //{
+
+            //    // Game Over Screen
+            //    SnakePlayer.SetActive(false);
+            //    HideScore.SetActive(false);
+            //    HideHighScore.SetActive(false);
+            //    HideHome.SetActive(false);
+            //    GameOver.SetActive(true);
+
+
+            //}
+
             ResetState();
         }
 
