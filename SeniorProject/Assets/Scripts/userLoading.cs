@@ -8,7 +8,7 @@ using System.Reflection;
 using UnityEngine.UI;
 using TMPro;
 using System.ComponentModel;
-//using System.Diagnostics;
+
 
 public class userLoading : MonoBehaviour
 {
@@ -42,8 +42,6 @@ public class userLoading : MonoBehaviour
         userPassword = GameObject.FindWithTag("PassText").GetComponent<TMP_Text>();
         InputUsername = userName.text;
         InputPassword = userPassword.text;
-        Debug.Log("first " + InputUsername);
-        Debug.Log("second" + InputPassword);
         ReadString(paths);
     }
 
@@ -81,20 +79,42 @@ public class userLoading : MonoBehaviour
             float.TryParse(data[8], out snakeScore1);
             float.TryParse(data[9], out snakeScore2);
             float.TryParse(data[10], out snakeScore3);
-            Debug.Log(counter);
             counter++;
+            //for testing----------------------------------
+            InputUsername = username;
+            InputPassword = password;
+            //-----------------------------------------------
+            bool nametest = InputUsername.Equals(username);
+            bool passtest = InputPassword.Equals(password);
+            
+            if (username == InputUsername)
+            {
+                Debug.Log("it's finally working");
+            }
+            else
+            {
+                Debug.Log("still does not work"+ "[" + InputUsername + "]"+ "[" + username + "]");
+            }
 
-            if (InputUsername == username && InputPassword == password)
+
+            if (nametest == true && passtest == true)
             {
                 PlayerPrefs.SetString("username", username);
                 PlayerPrefs.SetFloat("Brightness", brightness);
                 PlayerPrefs.SetFloat("volume", sound);
+                PlayerPrefs.SetInt("soundIn", 1);
                 //snakeup
                 //snakedown
                 //snakeleft
                 //snakeright
                 PlayerPrefs.SetFloat("HighScore", sound);
 
+            }
+            else
+            {
+                Debug.Log("still does not work" + "[" + InputUsername + "]" + "[" + username + "]");
+                Debug.Log("and" + "[" + InputPassword + "]" + "[" + password + "]");
+                Debug.Log("not the same");
             }
 
             

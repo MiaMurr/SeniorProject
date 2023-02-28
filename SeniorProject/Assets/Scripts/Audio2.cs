@@ -10,7 +10,13 @@ public class Audio2 : MonoBehaviour
     [SerializeField]private AudioSource m_AudioSource;
     [SerializeField] private Slider TheSlider;
     [SerializeField] private float VolumeLevel = 1f;
+    int Act;
+
+    
+
+
     void Start()
+        
     {
         m_AudioSource.Play();
         // if there is a volume in playerPref set it to that
@@ -19,10 +25,29 @@ public class Audio2 : MonoBehaviour
         //well set the audio and the slider to the volume
         m_AudioSource.volume= VolumeLevel;
         TheSlider.value= VolumeLevel;
+        PlayerPrefs.SetInt("soundIn", 0);
+    }
+    void Update()
+    {
+
+        Act = PlayerPrefs.GetInt("soundIn");
+        if (Act != 0)
+        {
+            login();
+        }
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    void login()
+    {
+        VolumeLevel = PlayerPrefs.GetFloat("volume");
+
+        //well set the audio and the slider to the volume
+        m_AudioSource.volume= VolumeLevel;
+        TheSlider.value= VolumeLevel;
+        PlayerPrefs.SetInt("soundIn", 0);
+    }
+    public void change()
     {
         m_AudioSource.volume = VolumeLevel;
         //PlayerPrefs will create or update volume with VolumeLevel

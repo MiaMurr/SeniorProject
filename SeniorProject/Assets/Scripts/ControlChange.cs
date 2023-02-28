@@ -14,9 +14,7 @@ public class ControlChange : MonoBehaviour
     [SerializeField] private TMP_Text displayButtion = null;
     private InputActionRebindingExtensions.RebindingOperation rebindingOperation;
 
-    private void Start()
-    {
-    }
+    
     void OnMouseUpAsButton()
     {
         Rebinding();
