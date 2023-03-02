@@ -376,7 +376,6 @@ GameObject:
   - component: {fileID: 719287389}
   - component: {fileID: 719287388}
   - component: {fileID: 719287387}
-  - component: {fileID: 719287386}
   m_Layer: 0
   m_Name: Wall (1)
   m_TagString: Obstacle
@@ -384,19 +383,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &719287386
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719287385}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &719287387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -491,7 +477,7 @@ GameObject:
   - component: {fileID: 934388706}
   m_Layer: 0
   m_Name: NewSnakeFollow
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -799,7 +785,6 @@ GameObject:
   - component: {fileID: 1033745190}
   - component: {fileID: 1033745189}
   - component: {fileID: 1033745188}
-  - component: {fileID: 1033745187}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Obstacle
@@ -807,19 +792,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1033745187
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033745186}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1033745188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1174,7 +1146,6 @@ GameObject:
   - component: {fileID: 1162473813}
   - component: {fileID: 1162473812}
   - component: {fileID: 1162473811}
-  - component: {fileID: 1162473810}
   m_Layer: 0
   m_Name: Wall (3)
   m_TagString: Obstacle
@@ -1182,19 +1153,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1162473810
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162473809}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1162473811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1466,7 +1424,6 @@ GameObject:
   - component: {fileID: 1718314193}
   - component: {fileID: 1718314192}
   - component: {fileID: 1718314191}
-  - component: {fileID: 1718314190}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Obstacle
@@ -1474,19 +1431,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1718314190
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718314189}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1718314191
 BoxCollider:
   m_ObjectHideFlags: 0
