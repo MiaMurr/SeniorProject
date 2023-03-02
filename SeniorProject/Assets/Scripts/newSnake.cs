@@ -5,6 +5,15 @@ using UnityEngine.InputSystem;
 
 public class newSnake : MonoBehaviour
 {
+    public GameObject SnakePlayer;
+    public GameObject GameOver;
+    public GameObject HideScore;
+    public GameObject HideHome;
+    public GameObject HideHighScore;
+    public GameObject Life1;
+    public GameObject Life2;
+    public GameObject Life3;
+    public int LossLif = 1;
     private Vector3 _direction;
     [SerializeField] private float snakeSpeed = 0.5f;
     //private List<Transform> _segments = new List<Transform>();
@@ -48,8 +57,35 @@ public class newSnake : MonoBehaviour
             Grow();
 
         }
+
         else if (other.tag == "Obstacle")
         {
+            switch (SnakeScore.Lives)
+            {
+
+                case 3:
+                    SnakeScore.Lives -= LossLif;
+                    Life1.SetActive(false);
+                    break;
+                case 2:
+                    SnakeScore.Lives -= LossLif;
+                    Life2.SetActive(false);
+                    break;
+                case 1:
+                    SnakeScore.Lives -= LossLif;
+                    Life3.SetActive(false);
+                    break;
+                case 0:
+                    // Game Over Screen
+                    SnakePlayer.SetActive(false);
+                    HideScore.SetActive(false);
+                    HideHighScore.SetActive(false);
+                    HideHome.SetActive(false);
+                    GameOver.SetActive(true);
+                    break;
+                default:
+                    break;
+            }
             ResetState();
         }
     }
