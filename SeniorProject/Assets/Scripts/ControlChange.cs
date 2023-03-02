@@ -24,8 +24,8 @@ public class ControlChange : MonoBehaviour
         RebindButtion.SetActive(false);
         Rebindingwaiting.SetActive(true);
         input.SwitchCurrentActionMap("Menu");
-
         rebindingOperation = MoveUP.action.PerformInteractiveRebinding()
+            
             .OnMatchWaitForAnother(0.1f)
             .WithControlsExcluding("Mouse")
             .OnComplete(operation => RebindDone())

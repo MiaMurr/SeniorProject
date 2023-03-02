@@ -33,27 +33,23 @@ public class userLoading : MonoBehaviour
     
     int counter = 0;
 
-    public TMP_Text userName;
-    public TMP_Text userPassword;
+    public TMP_InputField userName;
+    public TMP_InputField userPassword;
     
 
     public void ButtonClicked()
     {
-        //InputPassword = userPassword.GetComponent<TMP_Text>().text;
-        userName = GameObject.FindWithTag("UserText").GetComponent<TMP_Text>();
-        userPassword = GameObject.FindWithTag("PassText").GetComponent<TMP_Text>();
-        InputUsername = userName.text;
-        InputPassword = userPassword.text;
+        InputUsername = userName.GetComponent<TMP_InputField>().text;
+        InputPassword = userPassword.GetComponent<TMP_InputField>().text;
         ReadString(paths);
     }
 
-    //private void Start()
-    //{
-        
-    //    WriteString(paths);
-    //    ReadString(paths);
-        
-    //}
+    private void Start()
+    {
+        PlayerPrefs.SetInt("soundIn", 0);
+        PlayerPrefs.SetInt("brightnessSwitch", 0);
+
+    }
     public void WriteString()
     {
         string[]Lines = System.IO.File.ReadAllLines(paths);
@@ -68,14 +64,12 @@ public class userLoading : MonoBehaviour
         snakeScore1 = PlayerPrefs.GetFloat("HighScore");
         snakeScore2 = PlayerPrefs.GetFloat("HighScore2");
         snakeScore3 = PlayerPrefs.GetFloat("HighScore3");
-        copy = username +";"+ password +";" + brightness + ";" + sound + ";" +snakeup + ";" +
+        copy = username +";"+ password +";" + brightness + ";" + sound + ";" + snakeup + ";" +
             snakedown + ";" + snakeleft + ";" + snakeright + ";" +snakeScore1 + ";" +
             snakeScore2 + ";" +snakeScore3;
         Lines[lineinText] = copy;
         File.WriteAllLines(paths,Lines);
-        //StreamWriter writer = new StreamWriter(path, true);
-        ////writer.WriteLine("Test");
-        //writer.Close();
+        
     }
 
 
@@ -99,13 +93,6 @@ public class userLoading : MonoBehaviour
             float.TryParse(data[9], out snakeScore2);
             float.TryParse(data[10], out snakeScore3);
             
-            //for testing----------------------------------
-            InputUsername = username;
-            InputPassword = password;
-            //-----------------------------------------------
-            bool nametest = InputUsername.Equals(username);
-            bool passtest = InputPassword.Equals(password);
-            
             // if it is a match then change values
             if (username == InputUsername)
             {
@@ -117,12 +104,13 @@ public class userLoading : MonoBehaviour
             }
 
 
-            if (nametest == true && passtest == true)
+            if (username == InputUsername && password == InputPassword)
             {
 
                 PlayerPrefs.SetString("username", username);
                 PlayerPrefs.SetString("password", password);
                 PlayerPrefs.SetFloat("Brightness", brightness);
+                PlayerPrefs.SetInt( "brightnessSwitch",1);
                 PlayerPrefs.SetFloat("volume", sound);
                 PlayerPrefs.SetInt("soundIn", 1);
                 PlayerPrefs.SetString("snakeup,", snakeup);

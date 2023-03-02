@@ -25,33 +25,33 @@ public class Snake : MonoBehaviour
         Application.targetFrameRate = 30;//make sure that the game does not run at crazy speeds
     }
     
-    /*public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
+    public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
      //relating to buttion behavoiour
     {
         
         _direction = input.Get<Vector3>(); // WASD is connected to a certian direction of vector 3.
-    }*/
-
-     private void Update()
-     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            _direction = Vector3.up;
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            _direction = Vector3.down;
-        }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            _direction = Vector3.left;
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            _direction = Vector3.right;
-        }
-        
     }
+
+    // private void Update()
+    // {
+    //    if (Input.GetKeyDown(KeyCode.W))
+    //    {
+    //        _direction = Vector3.up;
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.S))
+    //    {
+    //        _direction = Vector3.down;
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.A))
+    //    {
+    //        _direction = Vector3.left;
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.D))
+    //    {
+    //        _direction = Vector3.right;
+    //    }
+        
+    //}
 
 
     private void FixedUpdate()

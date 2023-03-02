@@ -12,10 +12,6 @@ public class Audio2 : MonoBehaviour
     [SerializeField] private float VolumeLevel = 1f;
     int Act;
     public userLoading userLoading1;
-
-    
-
-
     void Start()
         
     {
@@ -26,7 +22,7 @@ public class Audio2 : MonoBehaviour
         //well set the audio and the slider to the volume
         m_AudioSource.volume= VolumeLevel;
         TheSlider.value= VolumeLevel;
-        PlayerPrefs.SetInt("soundIn", 0);
+        
     }
     void Update()
     {
