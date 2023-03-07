@@ -11,6 +11,7 @@ public class FollowPlayer : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        follow.gameObject.tag="following";
     }
 
     // Update is called once per frame

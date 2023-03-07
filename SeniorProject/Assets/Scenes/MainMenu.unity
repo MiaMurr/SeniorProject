@@ -3584,8 +3584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b9c39117dadf845a64d62af969cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  sceneName: 
+  type: level
+  sceneName: Level2Pong
   presentMenu: {fileID: 0}
   nextMenu: {fileID: 0}
 --- !u!1 &885545350
@@ -9240,7 +9240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2096755634
 Transform:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ TagManager:
   - PassText
   - SettingsMenu
   - UserText
+  - following
   layers:
   - Default
   - TransparentFX

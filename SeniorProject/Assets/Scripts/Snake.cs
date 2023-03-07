@@ -47,60 +47,60 @@ public class Snake : MonoBehaviour
     }
 
 
-    //private void FixedUpdate()
-    //{
-    //    for (int i = _segments.Count - 1; i > 0; i--)
-    //    {
-    //        _segments[i].position = _segments[i - 1].position;
-    //    }
+    private void FixedUpdate()
+    {
+        for (int i = _segments.Count - 1; i > 0; i--)
+        {
+            _segments[i].position = _segments[i - 1].position;
+        }
 
-    //    this.transform.position = new Vector3(
-    //    Mathf.Round(this.transform.position.x) + _direction.x,
-    //    Mathf.Round(this.transform.position.y) + _direction.y,
-    //    Mathf.Round(this.transform.position.z) + _direction.z);
-    //}
+        this.transform.position = new Vector3(
+        Mathf.Round(this.transform.position.x) + _direction.x,
+        Mathf.Round(this.transform.position.y) + _direction.y,
+        Mathf.Round(this.transform.position.z) + _direction.z);
+    }
 
-    //private void Grow()
-    //{
-    //    Transform segment = Instantiate(this.segmentPrefab);
-    //    segment.position = _segments[_segments.Count - 1].position;
+    private void Grow()
+    {
+        Transform segment = Instantiate(this.segmentPrefab);
+        segment.position = _segments[_segments.Count - 1].position;
 
-    //    _segments.Add(segment);
-    //}  
+        _segments.Add(segment);
+    }
 
-    // private void ResetState()
-    //{
-    //    for (int i =1; i < _segments.Count; i++)
-    //    {
-    //        Destroy(_segments[i].gameObject);
-    //    }
+    private void ResetState()
+    {
+        for (int i = 1; i < _segments.Count; i++)
+        {
+            Destroy(_segments[i].gameObject);
+        }
 
-    //    _segments.Clear();
-    //    _segments.Add(this.transform);
+        _segments.Clear();
+        _segments.Add(this.transform);
 
-    //    for (int i = 1; i < this.initialSize; i++)
-    //    {
-    //        _segments.Add(Instantiate(this.segmentPrefab));
-    //    }
+        for (int i = 1; i < this.initialSize; i++)
+        {
+            _segments.Add(Instantiate(this.segmentPrefab));
+        }
 
-    //    this.transform.position = Vector3.zero;
-    //}
-     
-    //private void OnTriggerEnter(Collider other)
-    //{
+        this.transform.position = Vector3.zero;
+    }
 
-    //    if (other.tag == "Food")
-    //    {
-    //        Grow();
+    private void OnTriggerEnter(Collider other)
+    {
 
-    //    }
-    //    else if (other.tag == "Obstacle")
-    //    {
-    //        ResetState();
-    //    }
+        if (other.tag == "Food")
+        {
+            Grow();
+
+        }
+        else if (other.tag == "Obstacle")
+        {
+            ResetState();
+        }
 
 
 
-    //}
+    }
 
 }

@@ -17,7 +17,10 @@ public class newSnake : MonoBehaviour
     private Vector3 _direction;
     [SerializeField] private float snakeSpeed = 0.5f;
     [SerializeField] private float snakeTurn = 20.0f;
-    
+
+    private List<Transform> _segments = new List<Transform>();
+    public Transform segmentPrefab;
+
     //private List<Transform> _segments = new List<Transform>();
     public int initialSize = 4;
     
@@ -92,7 +95,10 @@ public class newSnake : MonoBehaviour
 
     void Grow()
     {
+        Transform segment = Instantiate(this.segmentPrefab);
+        segment.position = _segments[_segments.Count + 1].position;
 
+        _segments.Add(segment);
     }
 
     void ResetState()
