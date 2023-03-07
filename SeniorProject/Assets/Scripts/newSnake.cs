@@ -20,8 +20,6 @@ public class newSnake : MonoBehaviour
 
     private List<Transform> _segments = new List<Transform>();
     public Transform segmentPrefab;
-
-    //private List<Transform> _segments = new List<Transform>();
     public int initialSize = 4;
     
 
