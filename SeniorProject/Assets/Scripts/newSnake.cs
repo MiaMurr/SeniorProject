@@ -16,6 +16,8 @@ public class newSnake : MonoBehaviour
     public int LossLif = 1;
     private Vector3 _direction;
     [SerializeField] private float snakeSpeed = 0.5f;
+    [SerializeField] private float snakeTurn = 20.0f;
+    
     //private List<Transform> _segments = new List<Transform>();
     public int initialSize = 4;
     
@@ -33,21 +35,19 @@ public class newSnake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SnakePlayer.gameObject.transform.position += transform.forward * Time.deltaTime * snakeSpeed;
         moveplayer();
         
     }
 
     void moveplayer()
-    {
-        Vector3 playerMovement = new Vector3(_direction.x, _direction.y, _direction.z);
-        transform.Translate(playerMovement * snakeSpeed * Time.deltaTime, Space.World);
-        
+    {   
         if (_direction.magnitude == 0)
         { 
             return; 
         }
         var rotation = Quaternion.LookRotation(_direction);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, snakeSpeed);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, snakeTurn);
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -26,26 +26,18 @@ public class Snake : MonoBehaviour
     }
     private void Update()
     {
+        this.transform.position += Vector3.forward * Time.deltaTime * snakeSpeed; 
         playerMovement();
     }
     public void playerMovement()
     {
         Vector3 playerMovement = new Vector3(_direction.x, 0f, _direction.z);
-        // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(_direction), 0.20f);
-        //Vector3 relativePosition = snakeHead.position - transform.position;
-        //Quaternion rotation = Quaternion.LookRotation(relativePosition, Vector3.up);
         transform.Translate(playerMovement * snakeSpeed * Time.deltaTime, Space.World);
         if (playerMovement != Vector3.zero)
         {
             transform.forward = playerMovement;
         }
-        //if(_direction.magnitude == 0) 
-        //{ 
-        //    return; 
-        //}
-        //var rotation = Quaternion.LookRotation(_direction);
-        //transform.eulerAngles = new Vector3(0f, _direction.y, 0f);
-        //transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, snakeSpeed);
+        
     }
     public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
      //relating to buttion behavoiour

@@ -113,7 +113,7 @@ public class userLoading : MonoBehaviour
                 PlayerPrefs.SetInt( "brightnessSwitch",1);
                 PlayerPrefs.SetFloat("volume", sound);
                 PlayerPrefs.SetInt("soundIn", 1);
-                PlayerPrefs.SetString("snakeup,", snakeup);
+                PlayerPrefs.SetString("snakeup", snakeup);
                 PlayerPrefs.SetString("snakedown", snakedown);
                 PlayerPrefs.SetString("snakeleft", snakeleft);
                 PlayerPrefs.SetString("snakeright", snakeright);
@@ -136,5 +136,16 @@ public class userLoading : MonoBehaviour
         
     }
 
-    
+    public void NewUserButtion()
+    {
+        InputUsername = userName.GetComponent<TMP_InputField>().text;
+        InputPassword = userPassword.GetComponent<TMP_InputField>().text;
+
+        //StreamWriter sw = new StreamWriter(paths);
+        //string newUser = InputUsername + ";" + InputPassword + ";1.0;1.0;w;s;a;d;0.0;0.0;0.0" ;
+        //sw.WriteLine(newUser);
+        //sw.Close();
+    }
+
+
 }

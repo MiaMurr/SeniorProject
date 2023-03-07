@@ -3,12 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Life2
+  - ScoreDisplay
+  - HighScore
+  - Obstacle
+  - UserScoreD
+  - Life3
+  - UserHighSD
+  - Life1
+  - Food
+  - NumOfLives
+  - PassText
+  - SettingsMenu
+  - UserText
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProccessing
   - Water
   - UI
   - 
