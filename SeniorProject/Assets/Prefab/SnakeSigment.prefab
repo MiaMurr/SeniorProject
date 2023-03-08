@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5128233855834984083}
   - component: {fileID: 5128233855834984082}
   m_Layer: 0
-  m_Name: NewSnakeFollow
+  m_Name: SnakeSigment
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

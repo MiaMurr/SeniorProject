@@ -11,7 +11,7 @@ public class FollowPlayer : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        follow.gameObject.tag="following";
+        follow = gameObject.transform.Find("tracker");
     }
 
     // Update is called once per frame

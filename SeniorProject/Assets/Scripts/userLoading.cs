@@ -35,12 +35,13 @@ public class userLoading : MonoBehaviour
 
     public TMP_InputField userName;
     public TMP_InputField userPassword;
-    
+
 
     public void ButtonClicked()
     {
+        userPassword.contentType = TMP_InputField.ContentType.Password;
         InputUsername = userName.GetComponent<TMP_InputField>().text;
-        InputPassword = userPassword.GetComponent<TMP_InputField>().text;
+        InputPassword = userPassword.text;
         ReadString(paths);
     }
 
@@ -120,7 +121,7 @@ public class userLoading : MonoBehaviour
                 PlayerPrefs.SetFloat("HighScore", snakeScore1);
                 PlayerPrefs.SetFloat("HighScore2", snakeScore2);
                 PlayerPrefs.SetFloat("HighScore3", snakeScore3);
-
+                Debug.Log("it's finally working right now with what we have");
                 // saved line location
                 lineinText = counter;
             }
