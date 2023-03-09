@@ -22,8 +22,10 @@ public class newSnake : MonoBehaviour
     public int numOfSeg = 0;
     public Transform segmentPrefab;
     public int initialSize = 4;
+    public string SnakeSegmentName;
     
 
+    
     public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
                                             //relating to buttion behavoiour
     {
@@ -31,19 +33,24 @@ public class newSnake : MonoBehaviour
     }
     void Start()
     {
+        // starts Game at 30 frams and sets the segment number
         Application.targetFrameRate = 30;
+        PlayerPrefs.SetInt("numOfseg",0);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        // will make sure the snake is in constint mostion
         SnakePlayer.gameObject.transform.position += transform.forward * Time.deltaTime * snakeSpeed;
         moveplayer();
         
     }
 
+    // will control the rotation of the player
     void moveplayer()
-    {   
+    {   // If makes it that once rotation is done it will stay in that direction
         if (_direction.magnitude == 0)
         { 
             return; 
@@ -53,7 +60,7 @@ public class newSnake : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-
+        
         if (other.tag == "Food")
         {
             Grow();
@@ -97,26 +104,18 @@ public class newSnake : MonoBehaviour
         
         Transform segment = Instantiate(this.segmentPrefab);
         _segments.Add(segment);
-        string SnakeSegmentName = "SnakeSegment" + numOfSeg;
+        SnakeSegmentName = "SnakeSigment" + numOfSeg;
         segment.name = (SnakeSegmentName);
         numOfSeg++;
+        int temp = numOfSeg-2;
+        SnakeSegmentName = "SnakeSigment" + temp;
+        PlayerPrefs.SetString("SnakeNameS", SnakeSegmentName);
+        PlayerPrefs.SetInt("numOfseg",numOfSeg);
     }
 
     void ResetState()
     {
-        //for (int i = 1; i < _segments.Count; i++)
-        //{
-        //    Destroy(_segments[i].gameObject);
-        //}
-
-        //_segments.Clear();
-        //_segments.Add(this.transform);
-
-        //for (int i = 1; i < this.initialSize; i++)
-        //{
-        //    //_segments.Add(Instantiate(this.segmentPrefab));
-        //}
-
         this.transform.position = new Vector3(0,9,0);
+        
     }
 }

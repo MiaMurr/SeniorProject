@@ -141,11 +141,9 @@ public class userLoading : MonoBehaviour
     {
         InputUsername = userName.GetComponent<TMP_InputField>().text;
         InputPassword = userPassword.GetComponent<TMP_InputField>().text;
-
-        //StreamWriter sw = new StreamWriter(paths);
-        //string newUser = InputUsername + ";" + InputPassword + ";1.0;1.0;w;s;a;d;0.0;0.0;0.0" ;
-        //sw.WriteLine(newUser);
-        //sw.Close();
+        string newUser = InputUsername + ";" + InputPassword + ";1.0;1.0;w;s;a;d;0.0;0.0;0.0";
+        File.AppendAllText(paths, newUser + Environment.NewLine);
+        
     }
 
 

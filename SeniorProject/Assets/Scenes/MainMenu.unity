@@ -593,51 +593,6 @@ MonoBehaviour:
   sceneName: 
   presentMenu: {fileID: 0}
   nextMenu: {fileID: 0}
---- !u!1 &102419756
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 102419758}
-  - component: {fileID: 102419757}
-  m_Layer: 0
-  m_Name: PopUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &102419757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102419756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f08a12575f6e34a4a95205e0e6e121a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SetScreen: {fileID: 1183413366}
---- !u!4 &102419758
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102419756}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 467.00003, y: 314.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180239960
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,9 +689,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 102419757}
-        m_TargetAssemblyTypeName: MenuPopUp, Assembly-CSharp
-        m_MethodName: ButtonClicked
+      - m_Target: {fileID: 305040294}
+        m_TargetAssemblyTypeName: MenuButtionChange, Assembly-CSharp
+        m_MethodName: OnMouseUpAsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1119,6 +1074,7 @@ GameObject:
   - component: {fileID: 305040291}
   - component: {fileID: 305040293}
   - component: {fileID: 305040292}
+  - component: {fileID: 305040294}
   m_Layer: 5
   m_Name: New user Text (TMP)
   m_TagString: Untagged
@@ -1243,6 +1199,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305040290}
   m_CullTransparentMesh: 1
+--- !u!114 &305040294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305040290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b9c39117dadf845a64d62af969cfec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: menuChange
+  sceneName: 
+  presentMenu: {fileID: 1183413366}
+  nextMenu: {fileID: 1718635452}
 --- !u!1 &320598342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,7 +1498,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &369145495
 MonoBehaviour:
@@ -5151,7 +5123,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1092518700
 GameObject:
@@ -6217,7 +6189,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 102419757}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuPopUp, Assembly-CSharp
         m_MethodName: ButtonClicked
         m_Mode: 1
@@ -7543,7 +7515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1718635453
 Transform:
   m_ObjectHideFlags: 0
@@ -8184,7 +8156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946334839}
   m_LocalRotation: {x: 0.00015419722, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15999997, y: -0.122, z: -0.027}
+  m_LocalPosition: {x: 0.02, y: 0.011, z: -0.027}
   m_LocalScale: {x: 1, y: 0.49999994, z: 0.09999998}
   m_ConstrainProportionsScale: 0
   m_Children: []

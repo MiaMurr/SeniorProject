@@ -28,6 +28,7 @@ public class MenuPopUp : MonoBehaviour
 
             SetScreen.SetActive(false);
 
+
         }
         else
         {

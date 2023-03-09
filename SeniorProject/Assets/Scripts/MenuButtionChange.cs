@@ -9,7 +9,7 @@ public class MenuButtionChange : MonoBehaviour
     public string sceneName;
     [SerializeField] protected GameObject presentMenu;
     [SerializeField] protected GameObject nextMenu;
-    void OnMouseUpAsButton()
+    public void OnMouseUpAsButton()
     {
 
         if (type.Equals("level"))
@@ -24,7 +24,7 @@ public class MenuButtionChange : MonoBehaviour
 
         if (type.Equals("menuChange"))
         {
-            presentMenu.gameObject.SetActive(false);
+            presentMenu.SetActive(false);
             nextMenu.SetActive(true);
         }
 
