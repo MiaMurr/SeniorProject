@@ -140,10 +140,12 @@ public class userLoading : MonoBehaviour
     public void NewUserButtion()
     {
         InputUsername = userName.GetComponent<TMP_InputField>().text;
-        InputPassword = userPassword.GetComponent<TMP_InputField>().text;
+        userPassword.contentType = TMP_InputField.ContentType.Password;
+        InputPassword = userPassword.text;
         string newUser = InputUsername + ";" + InputPassword + ";1.0;1.0;w;s;a;d;0.0;0.0;0.0";
         File.AppendAllText(paths, newUser + Environment.NewLine);
-        
+        ReadString(paths);
+
     }
 
 

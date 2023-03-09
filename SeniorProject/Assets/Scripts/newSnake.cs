@@ -23,6 +23,7 @@ public class newSnake : MonoBehaviour
     public Transform segmentPrefab;
     public int initialSize = 4;
     public string SnakeSegmentName;
+    public userLoading userLoading = null;
     
 
     
@@ -85,7 +86,9 @@ public class newSnake : MonoBehaviour
                     Life3.SetActive(false);
                     break;
                 case 0:
+
                     // Game Over Screen
+                    userLoading.WriteString();
                     SnakePlayer.SetActive(false);
                     HideScore.SetActive(false);
                     HideHighScore.SetActive(false);

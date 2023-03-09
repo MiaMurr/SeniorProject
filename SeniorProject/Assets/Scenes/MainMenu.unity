@@ -6189,9 +6189,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPopUp, Assembly-CSharp
-        m_MethodName: ButtonClicked
+      - m_Target: {fileID: 2027003227}
+        m_TargetAssemblyTypeName: MenuButtionChange, Assembly-CSharp
+        m_MethodName: OnMouseUpAsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8862,6 +8862,7 @@ GameObject:
   - component: {fileID: 2027003224}
   - component: {fileID: 2027003226}
   - component: {fileID: 2027003225}
+  - component: {fileID: 2027003227}
   m_Layer: 5
   m_Name: loginText
   m_TagString: Untagged
@@ -8986,6 +8987,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027003223}
   m_CullTransparentMesh: 1
+--- !u!114 &2027003227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027003223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b9c39117dadf845a64d62af969cfec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: menuChange
+  sceneName: 
+  presentMenu: {fileID: 1183413366}
+  nextMenu: {fileID: 1718635452}
 --- !u!1 &2036927200
 GameObject:
   m_ObjectHideFlags: 0

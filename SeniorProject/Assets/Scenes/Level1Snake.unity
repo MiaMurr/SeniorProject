@@ -2832,6 +2832,7 @@ MonoBehaviour:
   segmentPrefab: {fileID: 6112490482390437004, guid: e3aab211d35860f42a64e809150c2534, type: 3}
   initialSize: 4
   SnakeSegmentName: 
+  userLoading: {fileID: 2131643550}
 --- !u!1 &1033745186
 GameObject:
   m_ObjectHideFlags: 0
