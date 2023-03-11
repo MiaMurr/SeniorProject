@@ -1,4 +1,4 @@
-Skaven;Skaven;1;1;w;s;a;d;70;0;0
+feather;abc;1;0.05194485;w;s;a;d;40;0;0
 User;User2;1;.5;w;s;a;d;100;0;0
 Man2;Man2;1.0;1.0;w;s;a;d;0.0;0.0;0.0
 thing;thing;1.0;1.0;w;s;a;d;0.0;0.0;0.0

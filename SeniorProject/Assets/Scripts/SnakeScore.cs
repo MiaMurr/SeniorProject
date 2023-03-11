@@ -68,9 +68,7 @@ public class SnakeScore : MonoBehaviour
         //Manually sets the high score to zero, just make sure to comment it out after you run once or scoring won't work
         //PlayerPrefs.SetFloat("HighScore", 0);
 
-        //Set the highscore based on the player preferences 
-        HighTxt.text = "High Score: " + PlayerPrefs.GetFloat("HighScore");
-        LeadTxt.text = " " + PlayerPrefs.GetFloat("HighScore");
+        
 
     }
 
@@ -79,6 +77,10 @@ public class SnakeScore : MonoBehaviour
     {
         // In the Score field display the current score and add on more when called
         displyTxt.text = "Score: " + score;
+
+        //Set the highscore based on the player preferences 
+        HighTxt.text = "High Score: " + PlayerPrefs.GetFloat("HighScore");
+        LeadTxt.text = " " + PlayerPrefs.GetFloat("HighScore");
 
         EndTxt.text = " " + score;
 
