@@ -95,14 +95,14 @@ public class userLoading : MonoBehaviour
             float.TryParse(data[10], out snakeScore3);
             
             // if it is a match then change values
-            if (username == InputUsername)
-            {
-                Debug.Log("it's finally working");
-            }
-            else
-            {
-                Debug.Log("still does not work"+ "[" + InputUsername + "]"+ "[" + username + "]");
-            }
+            //if (username == InputUsername)
+            //{
+            //    Debug.Log("it's finally working");
+            //}
+            //else
+            //{
+            //    Debug.Log("still does not work"+ "[" + InputUsername + "]"+ "[" + username + "]");
+            //}
 
 
             if (username == InputUsername && password == InputPassword)
@@ -124,6 +124,7 @@ public class userLoading : MonoBehaviour
                 Debug.Log("it's finally working right now with what we have");
                 // saved line location
                 lineinText = counter;
+                Debug.Log(lineinText);
             }
             else
             {
