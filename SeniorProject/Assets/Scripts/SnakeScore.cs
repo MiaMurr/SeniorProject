@@ -27,9 +27,18 @@ public class SnakeScore : MonoBehaviour
     //Lives display
     public TMP_Text LivesTxt;
 
+    //Leaderboard display
+    public TMP_Text Username;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (Username == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            displyTxt = GameObject.FindWithTag("user")
+                .GetComponent<TMP_Text>();
+        }
         //Checks if the text field has no value 
         if (displyTxt == null)
         {
@@ -68,7 +77,7 @@ public class SnakeScore : MonoBehaviour
         //Manually sets the high score to zero, just make sure to comment it out after you run once or scoring won't work
         //PlayerPrefs.SetFloat("HighScore", 0);
 
-        
+        Username.text = PlayerPrefs.GetString("username");
 
     }
 

@@ -18,6 +18,7 @@ TagManager:
   - SettingsMenu
   - UserText
   - following
+  - user
   layers:
   - Default
   - TransparentFX

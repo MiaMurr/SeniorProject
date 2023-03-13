@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1733353, g: 0.21666707, b: 0.29872632, a: 1}
+  m_IndirectSpecularColor: {r: 0.17333557, g: 0.2166674, b: 0.29872683, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3647,7 +3647,7 @@ GameObject:
   - component: {fileID: 1146123654}
   m_Layer: 5
   m_Name: UsersLeaderBoardName
-  m_TagString: Untagged
+  m_TagString: user
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3692,7 +3692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TERRY
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 35f2a6b1dd8f58148b841db185b2eb59, type: 2}
   m_sharedMaterial: {fileID: -880990288799542395, guid: 35f2a6b1dd8f58148b841db185b2eb59, type: 2}
@@ -5009,6 +5009,7 @@ MonoBehaviour:
   EndTxt: {fileID: 722675740}
   LeadTxt: {fileID: 1297967979}
   LivesTxt: {fileID: 2076517711}
+  Username: {fileID: 1146123654}
 --- !u!4 &1379978042
 Transform:
   m_ObjectHideFlags: 0

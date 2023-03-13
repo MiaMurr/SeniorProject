@@ -1,5 +1,7 @@
-Skaven;Skaven;1;1;w;s;a;d;80;0;0
+feather;abc;1;0.05194485;w;s;a;d;40;0;0
 Man2;Man2;1.0;1.0;w;s;a;d;0.0;0.0;0.0
 thing;thing;1;0.282788;w;s;a;d;0;0;0
 menu;menu;1;1;w;s;a;d;40;0;0
 manthing;manthing;1;0.8463117;w;s;a;d;0;0;0
+MM;123;0.9180377;0.1735522;w;s;a;d;110;0;0
+West;time;1;0.1407674;w;s;a;d;0;0;0
