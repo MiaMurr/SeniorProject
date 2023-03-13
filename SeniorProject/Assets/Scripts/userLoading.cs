@@ -51,6 +51,13 @@ public class userLoading : MonoBehaviour
         PlayerPrefs.SetInt("brightnessSwitch", 0);
 
     }
+
+    public void Gamescore()
+    {
+        ReadString(paths);
+        WriteString();
+
+    }
     public void WriteString()
     {
         string[]Lines = System.IO.File.ReadAllLines(paths);
@@ -68,6 +75,7 @@ public class userLoading : MonoBehaviour
         copy = username +";"+ password +";" + brightness + ";" + sound + ";" + snakeup + ";" +
             snakedown + ";" + snakeleft + ";" + snakeright + ";" +snakeScore1 + ";" +
             snakeScore2 + ";" +snakeScore3;
+        lineinText = PlayerPrefs.GetInt("lineText");
         Lines[lineinText] = copy;
         File.WriteAllLines(paths,Lines);
         
@@ -93,16 +101,6 @@ public class userLoading : MonoBehaviour
             float.TryParse(data[8], out snakeScore1);
             float.TryParse(data[9], out snakeScore2);
             float.TryParse(data[10], out snakeScore3);
-            
-            // if it is a match then change values
-            //if (username == InputUsername)
-            //{
-            //    Debug.Log("it's finally working");
-            //}
-            //else
-            //{
-            //    Debug.Log("still does not work"+ "[" + InputUsername + "]"+ "[" + username + "]");
-            //}
 
 
             if (username == InputUsername && password == InputPassword)
@@ -124,6 +122,7 @@ public class userLoading : MonoBehaviour
                 Debug.Log("it's finally working right now with what we have");
                 // saved line location
                 lineinText = counter;
+                PlayerPrefs.SetInt("lineText", lineinText);
                 Debug.Log(lineinText);
             }
             else

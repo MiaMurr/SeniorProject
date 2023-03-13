@@ -1,4 +1,5 @@
-User;User2;1;.5;w;s;a;d;100;0;0
+Skaven;Skaven;1;1;w;s;a;d;80;0;0
 Man2;Man2;1.0;1.0;w;s;a;d;0.0;0.0;0.0
 thing;thing;1;0.282788;w;s;a;d;0;0;0
-menu;menu;1.0;1.0;w;s;a;d;0.0;0.0;0.0
+menu;menu;1;1;w;s;a;d;40;0;0
+manthing;manthing;1;0.8463117;w;s;a;d;0;0;0

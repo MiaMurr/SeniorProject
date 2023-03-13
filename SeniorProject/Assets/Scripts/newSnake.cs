@@ -88,7 +88,7 @@ public class newSnake : MonoBehaviour
                 case 0:
 
                     // Game Over Screen
-                    userLoading.WriteString();
+                    userLoading.Gamescore();
                     SnakePlayer.SetActive(false);
                     HideScore.SetActive(false);
                     HideHighScore.SetActive(false);
