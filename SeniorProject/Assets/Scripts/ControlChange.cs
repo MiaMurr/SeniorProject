@@ -20,10 +20,21 @@ public class ControlChange : MonoBehaviour
 
     private void Start()
     {
+        RebindButtion.SetActive(false);
+        Rebindingwaiting.SetActive(true);
+        input.SwitchCurrentActionMap(Changetmapping);
         //RebindDone();
+        displayButtion.text = InputControlPath.ToHumanReadableString(MoveAction.action.bindings[rebindNum].effectivePath,
+            InputControlPath.HumanReadableStringOptions.OmitDevice);
+
+
+        RebindButtion.SetActive(true);
+        Rebindingwaiting.SetActive(false);
+        input.SwitchCurrentActionMap(backmapping);
     }
     void OnMouseUpAsButton()
     {
+
         Rebinding();
     }
     void Rebinding()
