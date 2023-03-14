@@ -18,7 +18,10 @@ public class ControlChange : MonoBehaviour
     public int rebindNum = 0;
     private InputActionRebindingExtensions.RebindingOperation rebindingOperation;
 
-    
+    private void Start()
+    {
+        //RebindDone();
+    }
     void OnMouseUpAsButton()
     {
         Rebinding();
@@ -53,8 +56,9 @@ public class ControlChange : MonoBehaviour
 
     private void RebindDone()
     {
-        int BidingIndex = MoveAction.action.GetBindingIndexForControl(MoveAction.action.controls[rebindNum]);
-        displayButtion.text = InputControlPath.ToHumanReadableString(MoveAction.action.bindings[BidingIndex].effectivePath,
+        //int BidingIndex = MoveAction.action.GetBindingIndexForControl(MoveAction.action.controls[rebindNum]);
+        //Debug.Log(BidingIndex);
+        displayButtion.text = InputControlPath.ToHumanReadableString(MoveAction.action.bindings[rebindNum].effectivePath,
             InputControlPath.HumanReadableStringOptions.OmitDevice);
 
 
