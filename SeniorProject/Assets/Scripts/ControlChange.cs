@@ -10,8 +10,12 @@ public class ControlChange : MonoBehaviour
     [SerializeField] private PlayerInput input = null;
     [SerializeField] private GameObject RebindButtion = null;
     [SerializeField] private GameObject Rebindingwaiting = null;
-    [SerializeField] private InputActionReference MoveUP = null;
+    [SerializeField] private InputActionReference MoveAction = null;
     [SerializeField] private TMP_Text displayButtion = null;
+    [SerializeField] private string Changetmapping = "Menu";
+    [SerializeField] private string backmapping = "MenuGameplay";
+    public bool Composet = false;
+    public int rebindNum = 0;
     private InputActionRebindingExtensions.RebindingOperation rebindingOperation;
 
     
@@ -21,27 +25,42 @@ public class ControlChange : MonoBehaviour
     }
     void Rebinding()
     {
-        RebindButtion.SetActive(false);
-        Rebindingwaiting.SetActive(true);
-        input.SwitchCurrentActionMap("Menu");
-        rebindingOperation = MoveUP.action.PerformInteractiveRebinding()
-            
-            .OnMatchWaitForAnother(0.1f)
-            .WithControlsExcluding("Mouse")
-            .OnComplete(operation => RebindDone())
-            .Start();
+        if (Composet == false)
+        {
+            RebindButtion.SetActive(false);
+            Rebindingwaiting.SetActive(true);
+            input.SwitchCurrentActionMap(Changetmapping);
+            rebindingOperation = MoveAction.action.PerformInteractiveRebinding()
+
+                .OnMatchWaitForAnother(0.1f)
+                .WithControlsExcluding("Mouse")
+                .OnComplete(operation => RebindDone())
+                .Start();
+        }
+        else
+        {
+            RebindButtion.SetActive(false);
+            Rebindingwaiting.SetActive(true);
+            input.SwitchCurrentActionMap(Changetmapping);
+            rebindingOperation = MoveAction.action.PerformInteractiveRebinding()
+                .WithTargetBinding(rebindNum)
+                .OnMatchWaitForAnother(0.1f)
+                .WithControlsExcluding("Mouse")
+                .OnComplete(operation => RebindDone())
+                .Start();
+        }
     }
 
     private void RebindDone()
     {
-        int BidingIndex = MoveUP.action.GetBindingIndexForControl(MoveUP.action.controls[0]);
-        displayButtion.text = InputControlPath.ToHumanReadableString(MoveUP.action.bindings[BidingIndex].effectivePath,
+        int BidingIndex = MoveAction.action.GetBindingIndexForControl(MoveAction.action.controls[rebindNum]);
+        displayButtion.text = InputControlPath.ToHumanReadableString(MoveAction.action.bindings[BidingIndex].effectivePath,
             InputControlPath.HumanReadableStringOptions.OmitDevice);
 
 
         RebindButtion.SetActive(true);
         Rebindingwaiting.SetActive(false);
-        input.SwitchCurrentActionMap("MenuGameplay");
+        input.SwitchCurrentActionMap(backmapping);
         rebindingOperation.Dispose();
     }
 }
