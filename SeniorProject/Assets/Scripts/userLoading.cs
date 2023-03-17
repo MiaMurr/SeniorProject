@@ -32,9 +32,15 @@ public class userLoading : MonoBehaviour
     private string copy;
     
     int counter = 0;
+    private bool isAUser = false;
+    
 
     public TMP_InputField userName;
     public TMP_InputField userPassword;
+    public GameObject newuserError;
+    public GameObject LogInError;
+    public MenuButtionChange MenuChange;
+    [SerializeField] bool login = false;
 
 
     public void ButtonClicked()
@@ -49,6 +55,8 @@ public class userLoading : MonoBehaviour
     {
         PlayerPrefs.SetInt("soundIn", 0);
         PlayerPrefs.SetInt("brightnessSwitch", 0);
+        //newuserError.SetActive(false);
+        //LogInError.SetActive(false);
 
     }
 
@@ -124,17 +132,18 @@ public class userLoading : MonoBehaviour
                 lineinText = counter;
                 PlayerPrefs.SetInt("lineText", lineinText);
                 Debug.Log(lineinText);
+                isAUser = true;
+                if (login == true)
+                {
+                    MenuChange.OnMouseUpAsButton();
+                }
             }
-            else
+            if (isAUser == false)
             {
-                Debug.Log("still does not work" + "[" + InputUsername + "]" + "[" + username + "]");
-                Debug.Log("and" + "[" + InputPassword + "]" + "[" + password + "]");
-                Debug.Log("not the same");
+                LogInError.SetActive(true);   
             }
-
             counter++;
         }
-        
     }
 
     public void NewUserButtion()
@@ -142,9 +151,44 @@ public class userLoading : MonoBehaviour
         InputUsername = userName.GetComponent<TMP_InputField>().text;
         userPassword.contentType = TMP_InputField.ContentType.Password;
         InputPassword = userPassword.text;
-        string newUser = InputUsername + ";" + InputPassword + ";1.0;1.0;w;s;a;d;0.0;0.0;0.0";
-        File.AppendAllText(paths, newUser + Environment.NewLine);
-        ReadString(paths);
+
+        foreach (string line in File.ReadAllLines(paths))
+        {
+            string[] data = line.Split(';');
+
+            // assigning all the variables
+            username = data[0];
+            password = data[1];
+            float.TryParse(data[2], out brightness);
+            float.TryParse(data[3], out sound);
+            snakeup = data[4];
+            snakedown = data[5];
+            snakeleft = data[6];
+            snakeright = data[7];
+            float.TryParse(data[8], out snakeScore1);
+            float.TryParse(data[9], out snakeScore2);
+            float.TryParse(data[10], out snakeScore3);
+
+            if (username == InputUsername)
+            {
+                isAUser = true;
+            }
+
+            
+        }
+        if (isAUser == true)
+        {
+            newuserError.SetActive(true);
+        }
+        else
+        {
+            string newUser = InputUsername + ";" + InputPassword + ";1.0;1.0;w;s;a;d;0.0;0.0;0.0";
+            File.AppendAllText(paths, newUser + Environment.NewLine);
+            ReadString(paths);
+            MenuChange.OnMouseUpAsButton();
+
+        }
+        isAUser = false;
 
     }
 
