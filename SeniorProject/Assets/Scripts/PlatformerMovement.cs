@@ -7,39 +7,19 @@ public class PlatformerMovement : MonoBehaviour
 {
     public GameObject Player;
     public float speed;
-
-    void Update() {
-
-
-        Vector3 dir = Vector3.zero;
-        if (Input.GetKey(KeyCode.A))
-        {
-            dir.x = -1;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            dir.x = 1;
-        }
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            dir.y = 1;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            dir.y = -1;
-
-        }
-
-        dir.Normalize();
-        //GetComponent<Rigidbody2D>().velocity = speed * dir;
-
-        //if (Input.GetKeyDown("W")){
-
-        //    GetComponent<Rigidbody>().velocity = new Vector3(0,5, 0);
-        
-        //}
-    
+    private Vector3 _direction;
+    public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
+                                             //relating to buttion behavoiour
+    {
+        _direction = input.Get<Vector3>(); // WASD is connected to a certian direction of vector 3
     }
-   
+    void moveplayer()
+    {   // If makes it that once rotation is done it will stay in that direction
+        if (_direction.magnitude == 0)
+        {
+            return;
+        }
+        var rotation = Quaternion.LookRotation(_direction);
+        //transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, snakeTurn);
+    }
 }
