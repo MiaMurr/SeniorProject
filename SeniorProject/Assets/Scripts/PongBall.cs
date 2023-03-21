@@ -10,18 +10,20 @@ public class PongBall : MonoBehaviour
     public float PongMaxBoostSpeed;
     public Rigidbody rb;
     public int PongSpeedHitCount = 0;
+    public PongGameController Controller;
 
 
     public IEnumerator PongBallStart()
     {
         resetBall();
         PongSpeedHitCount = 0;
-        //yield return new WaitForSeconds(5);
-        yield return new WaitForSeconds(0);
-        //float x = Random.Range(0, 2) == 0 ? -1 : 1;
-        //float y = Random.Range(0, 2) == 0 ? -1 : 1;
-        float x = Random.Range(0, 2) == 0 ? 1 : 1;
+        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(0);
+        float x = Random.Range(0, 2) == 0 ? -1 : 1;
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
+        // AI Testing
+        //float x = Random.Range(0, 2) == 0 ? 1 : 1;
+        //float y = Random.Range(0, 2) == 0 ? -1 : 1;
 
         BallSpeed(new Vector3(PongBallLaunchSpeed * x, PongBallLaunchSpeed * y, 0));
 
@@ -60,6 +62,18 @@ public class PongBall : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        if (Controller.playerDifficultySlider.slider.value == 0)// easy
+        {
+            PongMaxBoostSpeed = PongMaxBoostSpeed - 5;
+        }
+        else if (Controller.playerDifficultySlider.slider.value == 1)// medium
+        {
+
+        }
+        else // hard
+        {
+            PongMaxBoostSpeed = PongMaxBoostSpeed + 2.5f;
+        }
     }
 
     // Update is called once per frame

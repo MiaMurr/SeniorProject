@@ -36,6 +36,7 @@ public class PongScoreManager : MonoBehaviour
         if(leftScore == endgameScore || rightScore == endgameScore)
         {
             gameController.pongGame.SetActive(false);
+            gameController.playerCooldownSliders.SetActive(false);
             gameOverScreen.SetActive(true);
             if (leftScore == endgameScore) 
             { 

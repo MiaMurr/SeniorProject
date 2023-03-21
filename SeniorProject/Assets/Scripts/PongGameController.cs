@@ -12,6 +12,9 @@ public class PongGameController : MonoBehaviour
     public GameObject leftWinner;
     public GameObject rightWinner;
     public PongTwoPlayerToggle twoPlayerToggle;
+    public GameObject playerCooldownSliders;
+    public PongDifficultySlider playerDifficultySlider;
+
 
     public void startMatch()
     {
@@ -19,6 +22,7 @@ public class PongGameController : MonoBehaviour
         pongBall.startPongMatch();
         startScreen.SetActive(false);
         scores.SetActive(true);
+        playerCooldownSliders.SetActive(true);
     }
 
     
@@ -27,7 +31,7 @@ public class PongGameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

@@ -17,8 +17,17 @@ public class PongPlayer : MonoBehaviour
     public Collider ball;
     private bool chaseBall = false;
 
-
-
+    public PongProjectile projectilePrefab;
+    public Transform projectileLoc;
+    public float projectileCooldown;
+    public float player1Cooldown;
+    public float player2Cooldown;
+    public PongScoreManager scoreManager;
+    public AudioSource playScoreBounceSound;
+    public PongBall pongBall;
+    public PongPlayerController players;
+    public GameObject LeftPlayerCooldownSlider;
+    public AudioSource soundEffect;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,40 +45,136 @@ public class PongPlayer : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "PongRightPlayerProjectile")
+        {
+            playScoreBounceSound.Play();
+            scoreManager.rightPlayerScored();
+            if (scoreManager.gameOverScreen.activeSelf == false)
+            {
+                StartCoroutine(pongBall.PongBallStart());
+                players.resetPlayer();
+            }
+        }
+        if (collision.gameObject.tag == "PongLeftPlayerProjectile")
+        {
+            playScoreBounceSound.Play();
+            scoreManager.leftPlayerScored();
+            if (scoreManager.gameOverScreen.activeSelf == false)
+            {
+                StartCoroutine(pongBall.PongBallStart());
+                players.resetPlayer();
+            }
+        }
+    }
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb= GetComponent<Rigidbody>();
-        if(gameController.twoPlayerToggle.toggle.isOn == false)
+        player1Cooldown = projectileCooldown;
+        player2Cooldown = projectileCooldown;
+        if (gameController.twoPlayerToggle.toggle.isOn == false)
         {
-            isAI= true;
+            isAI = true;
+            LeftPlayerCooldownSlider.SetActive(false);
+        }
+        if (gameController.playerDifficultySlider.slider.value == 0) //easy
+        {
+            projectileCooldown = projectileCooldown + 5;
+            projectilePrefab.speed = 5.5f;
+        }
+        else if (gameController.playerDifficultySlider.slider.value == 1) //medium
+        {
+            PongSpeed = PongSpeed + 1.0f;
+            projectilePrefab.speed = 10f;
+        }
+        else //hard
+        {
+            projectileCooldown = projectileCooldown - 2.5f;
+            PongSpeed = PongSpeed + 2.0f;
+            projectilePrefab.speed = 15f;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(PongPlayerOne)
+        if (player1Cooldown > 0)
         {
-            motion = Input.GetAxisRaw("Player1Movement");
+            player1Cooldown -= Time.deltaTime;
+        }
+        if (player2Cooldown > 0)
+        {
+            player2Cooldown -= Time.deltaTime;
+        }
+        if (PongPlayerOne)
+        {
+            motion = Input.GetAxisRaw("PongPlayer1Movement");
+            if (Input.GetButtonDown("PongPlayer1Fire"))
+            {
+                if (player1Cooldown <= 0 && isAI == false)
+                {
+                    var newProjectile1 = Instantiate(projectilePrefab, projectileLoc.position, projectileLoc.rotation);
+                    newProjectile1.tag = "PongLeftPlayerProjectile";
+                    newProjectile1.transform.parent = gameObject.transform.parent;
+                    player1Cooldown = projectileCooldown;
+                    soundEffect.Play();
+                }
+            }
         }
         else if (gameController.twoPlayerToggle.toggle.isOn)
         {
-            motion = Input.GetAxisRaw("Player2Movement");
+            motion = Input.GetAxisRaw("PongPlayer2Movement");
+            if (Input.GetButtonDown("PongPlayer2Fire"))
+            {
+                if (player2Cooldown <= 0)
+                {
+                    var newProjectile2 = Instantiate(projectilePrefab, projectileLoc.position, projectileLoc.rotation);
+                    newProjectile2.tag = "PongRightPlayerProjectile";
+                    newProjectile2.transform.parent = gameObject.transform.parent;
+                    player2Cooldown = projectileCooldown;
+                    soundEffect.Play();
+                }
+            }
         }
         else
         {
-            if(chaseBall==true)
+            if (player2Cooldown <= 0)
+            {
+                var newProjectile2 = Instantiate(projectilePrefab, projectileLoc.position, projectileLoc.rotation);
+                newProjectile2.tag = "PongRightPlayerProjectile";
+                newProjectile2.transform.parent = gameObject.transform.parent;
+                player2Cooldown = projectileCooldown;
+                soundEffect.Play();
+            }
+            if (chaseBall == true)
             {
                 if (gameController.pongBall.transform.position.y > transform.position.y + 1)
                 {
                     motion = 1.75f;
+                    if (gameController.playerDifficultySlider.slider.value == 1) //medium
+                    {
+                        motion = 2.0f;
+                    }
+                    if (gameController.playerDifficultySlider.slider.value == 2) //hard
+                    {
+                        motion = 2.5f;
+                    }
                 }
                 else if (gameController.pongBall.transform.position.y < transform.position.y - 1)
                 {
                     motion = -1.75f;
+                    if (gameController.playerDifficultySlider.slider.value == 1) //medium
+                    {
+                        motion = -2.0f;
+                    }
+                    if (gameController.playerDifficultySlider.slider.value == 2) //hard
+                    {
+                        motion = -2.5f;
+                    }
                 }
             }
             else

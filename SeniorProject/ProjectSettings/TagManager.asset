@@ -20,6 +20,9 @@ TagManager:
   - following
   - user
   - Key
+  - PongLeftPlayerProjectile
+  - PongRightPlayerProjectile
+  - PongProjectileEffect
   layers:
   - Default
   - TransparentFX
