@@ -62,7 +62,7 @@ public class userLoading : MonoBehaviour
 
     public void Gamescore()
     {
-        ReadString(paths);
+        //ReadString(paths);
         WriteString();
 
     }
