@@ -19,6 +19,7 @@ TagManager:
   - UserText
   - following
   - user
+  - Key
   layers:
   - Default
   - TransparentFX
