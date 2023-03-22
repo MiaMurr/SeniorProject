@@ -23,6 +23,16 @@ TagManager:
   - PongLeftPlayerProjectile
   - PongRightPlayerProjectile
   - PongProjectileEffect
+  - user1
+  - user2
+  - user3
+  - user4
+  - user5
+  - HS1
+  - HS2
+  - HS3
+  - HS4
+  - HS5
   layers:
   - Default
   - TransparentFX
