@@ -137,6 +137,7 @@ public class userLoading : MonoBehaviour
                 {
                     MenuChange.OnMouseUpAsButton();
                 }
+                PlayerPrefs.SetInt("Playerlogin", 1);
             }
             if (isAUser == false)
             {
