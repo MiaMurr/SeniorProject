@@ -974,7 +974,7 @@ MonoBehaviour:
   userName: {fileID: 460094425}
   userPassword: {fileID: 1251316013}
   newuserError: {fileID: 489719799}
-  LogInError: {fileID: 0}
+  LogInError: {fileID: 489719799}
   MenuChange: {fileID: 785162076}
   login: 0
 --- !u!114 &94440815
