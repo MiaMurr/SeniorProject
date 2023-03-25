@@ -58,7 +58,7 @@ public class BrightnessControls : MonoBehaviour
         else
         {
             
-            exposure.keyValue.value = .2f;
+            exposure.keyValue.value = 1.0f;
         }
     }
 }

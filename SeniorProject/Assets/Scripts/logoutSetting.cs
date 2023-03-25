@@ -8,6 +8,8 @@ public class logoutSetting : MonoBehaviour
     public GameObject loginScreen;
     public GameObject menuscreen;
     public GameObject LogoutButtion;
+    public userLoading userLoading1;
+    public userLoading userLoading2;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,8 @@ public class logoutSetting : MonoBehaviour
         loginScreen.SetActive(true);
         menuscreen.SetActive(false);
         LogoutButtion.SetActive(false);
+        userLoading1.counter = 0;
+        userLoading2.counter = 0;
     }
 
     public void logoutButtion()

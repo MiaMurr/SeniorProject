@@ -31,7 +31,7 @@ public class userLoading : MonoBehaviour
     private int lineinText = 0;
     private string copy;
     
-    int counter = 0;
+    public int counter = 0;
     private bool isAUser = false;
     
 
