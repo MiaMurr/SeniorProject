@@ -24,19 +24,18 @@ public class BrightnessControls : MonoBehaviour
     void Update()
     {
         Act = PlayerPrefs.GetInt("brightnessSwitch");
-        Debug.Log("the saved  data"+PlayerPrefs.GetInt("brightnessSwitch"));
-        Debug.Log("this is the brightness value" + Act);
+       
         if (Act != 0)
         {
             login();
-            Debug.Log("it's loging in");
+            ;
         }
     }
 
     private void login()
     {
         float loginExposer = PlayerPrefs.GetFloat("Brightness");
-        Debug.Log(" Brightness data "+loginExposer);
+        
         ChangeBrightness(loginExposer);
         m_Slider.value = loginExposer;
         PlayerPrefs.SetInt("brightnessSwitch",0);
@@ -53,12 +52,12 @@ public class BrightnessControls : MonoBehaviour
 
         if (theInput != 0)
         {
-            Debug.Log("it is not 0 so should change");
+            
             exposure.keyValue.value = theInput;
         }
         else
         {
-            Debug.Log("it's zero so it's set to .2f");
+            
             exposure.keyValue.value = .2f;
         }
     }
