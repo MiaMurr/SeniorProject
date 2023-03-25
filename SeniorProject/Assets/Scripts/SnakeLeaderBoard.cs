@@ -15,13 +15,22 @@ public class SnakeLeaderBoard : MonoBehaviour
     public TMP_Text user3;
     public TMP_Text user4;
     public TMP_Text user5;
+    public TMP_Text user6;
+    public TMP_Text user7;
+    public TMP_Text user8;
+    public TMP_Text user9;
+    public TMP_Text user10;
 
     public TMP_Text HS1;
     public TMP_Text HS2;
     public TMP_Text HS3;
     public TMP_Text HS4;
     public TMP_Text HS5;
-
+    public TMP_Text HS6;
+    public TMP_Text HS7;
+    public TMP_Text HS8;
+    public TMP_Text HS9;
+    public TMP_Text HS10;
 
 
 
@@ -82,6 +91,16 @@ public class SnakeLeaderBoard : MonoBehaviour
         HS4.text = " " + Sorted.ElementAt(3).Value;
         user5.text = " " + Sorted.ElementAt(4).Key;
         HS5.text = " " + Sorted.ElementAt(4).Value;
+        user6.text = " " + Sorted.ElementAt(5).Key;
+        HS6.text = " " + Sorted.ElementAt(5).Value;
+        user7.text = " " + Sorted.ElementAt(6).Key;
+        HS7.text = " " + Sorted.ElementAt(6).Value;
+        user8.text = " " + Sorted.ElementAt(7).Key;
+        HS8.text = " " + Sorted.ElementAt(7).Value;
+        user9.text = " " + Sorted.ElementAt(8).Key;
+        HS9.text = " " + Sorted.ElementAt(8).Value;
+        user10.text = " " + Sorted.ElementAt(9).Key;
+        HS10.text = " " + Sorted.ElementAt(9).Value;
         Debug.Log($"Just Value: {Sorted.ElementAt(1).Value}");
     }
 
@@ -121,6 +140,40 @@ public class SnakeLeaderBoard : MonoBehaviour
             user5 = GameObject.FindWithTag("user5")
                 .GetComponent<TMP_Text>();
         }
+        if (user6 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            user1 = GameObject.FindWithTag("user6")
+                .GetComponent<TMP_Text>();
+        }
+        //Checks if the text field has no value 
+        if (user7 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            user2 = GameObject.FindWithTag("user7")
+                .GetComponent<TMP_Text>();
+        }
+
+        if (user8 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            user3 = GameObject.FindWithTag("user8")
+                .GetComponent<TMP_Text>();
+        }
+
+        if (user9 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            user4 = GameObject.FindWithTag("user9")
+                .GetComponent<TMP_Text>();
+        }
+
+        if (user10 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            user5 = GameObject.FindWithTag("user10")
+                .GetComponent<TMP_Text>();
+        }
 
         if (HS1 == null)
         {
@@ -150,6 +203,36 @@ public class SnakeLeaderBoard : MonoBehaviour
         {
             //Finds the tag on the text field and gets whats being held
             HS5 = GameObject.FindWithTag("HS5")
+                .GetComponent<TMP_Text>();
+        }
+        if (HS6 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            HS1 = GameObject.FindWithTag("HS6")
+                .GetComponent<TMP_Text>();
+        }
+        if (HS7 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            HS2 = GameObject.FindWithTag("HS7")
+                .GetComponent<TMP_Text>();
+        }
+        if (HS8 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            HS3 = GameObject.FindWithTag("HS8")
+                .GetComponent<TMP_Text>();
+        }
+        if (HS9 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            HS4 = GameObject.FindWithTag("HS9")
+                .GetComponent<TMP_Text>();
+        }
+        if (HS10 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            HS5 = GameObject.FindWithTag("HS10")
                 .GetComponent<TMP_Text>();
         }
 
