@@ -33,6 +33,16 @@ TagManager:
   - HS3
   - HS4
   - HS5
+  - user6
+  - user7
+  - user8
+  - user9
+  - user10
+  - HS6
+  - HS7
+  - HS8
+  - HS9
+  - HS10
   layers:
   - Default
   - TransparentFX
