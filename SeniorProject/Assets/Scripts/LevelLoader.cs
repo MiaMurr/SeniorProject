@@ -9,6 +9,7 @@ public class LevelLoader : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("brightnessSwitch", 1);
+        Debug.Log("the start of the code brightness switch" + PlayerPrefs.GetInt("brightnessSwitch"));
         PlayerPrefs.SetInt("soundIn", 1);
     }
 
