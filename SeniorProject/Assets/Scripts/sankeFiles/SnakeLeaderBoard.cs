@@ -20,6 +20,7 @@ public class SnakeLeaderBoard : MonoBehaviour
     public TMP_Text user8;
     public TMP_Text user9;
     public TMP_Text user10;
+    public TMP_Text user11;
 
     public TMP_Text HS1;
     public TMP_Text HS2;
@@ -31,6 +32,7 @@ public class SnakeLeaderBoard : MonoBehaviour
     public TMP_Text HS8;
     public TMP_Text HS9;
     public TMP_Text HS10;
+    public TMP_Text HS11;
 
 
 
@@ -101,6 +103,8 @@ public class SnakeLeaderBoard : MonoBehaviour
         HS9.text = " " + Sorted.ElementAt(8).Value;
         user10.text = " " + Sorted.ElementAt(9).Key;
         HS10.text = " " + Sorted.ElementAt(9).Value;
+        user11.text = " " + Sorted.ElementAt(0).Key;
+        HS11.text = " " + Sorted.ElementAt(0).Value;
         Debug.Log($"Just Value: {Sorted.ElementAt(1).Value}");
     }
 
@@ -174,6 +178,12 @@ public class SnakeLeaderBoard : MonoBehaviour
             user5 = GameObject.FindWithTag("user10")
                 .GetComponent<TMP_Text>();
         }
+        if (user11 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            user5 = GameObject.FindWithTag("user10")
+                .GetComponent<TMP_Text>();
+        }
 
         if (HS1 == null)
         {
@@ -235,8 +245,14 @@ public class SnakeLeaderBoard : MonoBehaviour
             HS5 = GameObject.FindWithTag("HS10")
                 .GetComponent<TMP_Text>();
         }
+        if (HS11 == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            HS5 = GameObject.FindWithTag("HS11")
+                .GetComponent<TMP_Text>();
+        }
 
-        //userScore();
+        userScore();
     }
 
     void Update() {

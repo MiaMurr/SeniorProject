@@ -85,10 +85,10 @@ public class SnakeScore : MonoBehaviour
     void Update()
     {
         // In the Score field display the current score and add on more when called
-        displyTxt.text = "Score: " + score;
+        displyTxt.text = "Score: \t" + score;
 
         //Set the highscore based on the player preferences 
-        HighTxt.text = "High Score: " + PlayerPrefs.GetFloat("HighScore");
+        HighTxt.text = "High Score: \n\n" + PlayerPrefs.GetFloat("HighScore");
         LeadTxt.text = " " + PlayerPrefs.GetFloat("HighScore");
 
         EndTxt.text = " " + score;

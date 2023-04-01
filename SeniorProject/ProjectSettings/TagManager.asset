@@ -43,6 +43,8 @@ TagManager:
   - HS8
   - HS9
   - HS10
+  - user11
+  - HS11
   layers:
   - Default
   - TransparentFX
