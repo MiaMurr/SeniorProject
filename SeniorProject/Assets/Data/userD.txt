@@ -30,3 +30,4 @@ jorget;Test1;1;1;w;s;a;d;410;0;0
 ;;1.0;1.0;w;s;a;d;0.0;0.0;0.0
 dsf;dsf;1.0;1.0;w;s;a;d;0.0;0.0;0.0
 sfdvzfv;sdfszdf;1.0;1.0;w;s;a;d;0.0;0.0;0.0
+brandX;Henderson;1;0.5377732;w;s;a;d;210;0;0
