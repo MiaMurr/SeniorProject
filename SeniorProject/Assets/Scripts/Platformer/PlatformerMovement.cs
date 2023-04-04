@@ -10,6 +10,7 @@ public class PlatformerMovement : MonoBehaviour
     [SerializeField]private float speed;
     private Vector3 playerMove;
     [SerializeField] private float snakeTurn;
+    public float key = 1;
 
     public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
                                              //relating to buttion behavoiour
@@ -20,6 +21,17 @@ public class PlatformerMovement : MonoBehaviour
     void Update()
     {
         moveplayer();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "Key")
+        {
+            KeyCollection.score += key;
+            other.gameObject.SetActive(false);
+        }
+
     }
 
     void moveplayer()
