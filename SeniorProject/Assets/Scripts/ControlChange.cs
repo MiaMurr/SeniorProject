@@ -79,15 +79,4 @@ public class ControlChange : MonoBehaviour
         rebindingOperation.Dispose();
     }
 
-    // will set the 
-    //public void userDataSet()
-    //{
-    //    RebindButtion.SetActive(false);
-    //    Rebindingwaiting.SetActive(true);
-    //    input.SwitchCurrentActionMap(Changetmapping);
-    //    //rebindingOperation = MoveAction.action.ApplyBindingOverride(,0,"<Keyboard>/escape", MoveAction.action.bindings[0].path)
-    //    ;
-    //            //.WithTargetBinding(rebindNum);
-
-    //}
 }
