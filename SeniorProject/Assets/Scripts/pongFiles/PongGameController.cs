@@ -14,18 +14,43 @@ public class PongGameController : MonoBehaviour
     public PongTwoPlayerToggle twoPlayerToggle;
     public GameObject playerCooldownSliders;
     public PongDifficultySlider playerDifficultySlider;
+    public GameObject howtoplayScreenSP;
+    public GameObject howtoplayScreenMP;
+    public GameObject startmenuButton;
 
-
+    public void startPreMatch()
+    {
+        //pongGame.SetActive(true);
+        //pongBall.startPongMatch();
+        if (twoPlayerToggle.toggle.isOn)
+        {
+            howtoplayScreenMP.SetActive(true);
+        }
+        else
+        {
+            howtoplayScreenSP.SetActive(true);
+        }
+        startScreen.SetActive(false);
+        //scores.SetActive(true);
+        //playerCooldownSliders.SetActive(true);
+    }
     public void startMatch()
     {
         pongGame.SetActive(true);
         pongBall.startPongMatch();
-        startScreen.SetActive(false);
+        if (twoPlayerToggle.toggle.isOn)
+        {
+            howtoplayScreenMP.SetActive(false);
+        }
+        else
+        {
+            howtoplayScreenSP.SetActive(false);
+        }
         scores.SetActive(true);
         playerCooldownSliders.SetActive(true);
+        startmenuButton.SetActive(true);
     }
 
-    
 
 
     // Start is called before the first frame update

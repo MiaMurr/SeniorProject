@@ -5,6 +5,8 @@ using UnityEditorInternal;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using Newtonsoft.Json.Linq;
 
 public class PongPlayer : MonoBehaviour
 {
@@ -28,6 +30,8 @@ public class PongPlayer : MonoBehaviour
     public PongPlayerController players;
     public GameObject LeftPlayerCooldownSlider;
     public AudioSource soundEffect;
+
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -68,6 +72,64 @@ public class PongPlayer : MonoBehaviour
             }
         }
     }
+
+    public void PlayerOneMovement(InputAction.CallbackContext context)
+    {
+        if (context.control != null)
+        {
+            motion = context.ReadValue<Vector3>().y;
+        }
+        else
+        {
+            motion = 0;
+        }
+    }
+    public void PlayerTwoMovement(InputAction.CallbackContext context)
+    {
+        if (gameController.twoPlayerToggle.toggle.isOn)
+        {
+            if (context.control != null)
+            {
+                motion = context.ReadValue<Vector3>().y;
+            }
+            else
+            {
+                motion = 0;
+            }
+        }
+    }
+
+    public void PlayerOneFire(InputAction.CallbackContext context)
+    {
+        if (player1Cooldown <= 0 && isAI == false)
+        {
+            var newProjectile1 = Instantiate(projectilePrefab, projectileLoc.position, projectileLoc.rotation);
+            newProjectile1.tag = "PongLeftPlayerProjectile";
+            newProjectile1.transform.parent = gameObject.transform.parent;
+            player1Cooldown = projectileCooldown;
+            soundEffect.Play();
+        }
+    }
+    public void PlayerTwoFire(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (gameController.twoPlayerToggle.toggle.isOn)
+            {
+                if (player2Cooldown <= 0)
+                {
+                    var newProjectile2 = Instantiate(projectilePrefab, projectileLoc.position, projectileLoc.rotation);
+                    newProjectile2.tag = "PongRightPlayerProjectile";
+                    newProjectile2.transform.parent = gameObject.transform.parent;
+                    player2Cooldown = projectileCooldown;
+                    soundEffect.Play();
+                }
+            }
+        }
+        
+    }
+
+
 
 
     // Start is called before the first frame update
@@ -110,37 +172,42 @@ public class PongPlayer : MonoBehaviour
         {
             player2Cooldown -= Time.deltaTime;
         }
-        if (PongPlayerOne)
-        {
-            motion = Input.GetAxisRaw("PongPlayer1Movement");
-            if (Input.GetButtonDown("PongPlayer1Fire"))
-            {
-                if (player1Cooldown <= 0 && isAI == false)
-                {
-                    var newProjectile1 = Instantiate(projectilePrefab, projectileLoc.position, projectileLoc.rotation);
-                    newProjectile1.tag = "PongLeftPlayerProjectile";
-                    newProjectile1.transform.parent = gameObject.transform.parent;
-                    player1Cooldown = projectileCooldown;
-                    soundEffect.Play();
-                }
-            }
-        }
-        else if (gameController.twoPlayerToggle.toggle.isOn)
-        {
-            motion = Input.GetAxisRaw("PongPlayer2Movement");
-            if (Input.GetButtonDown("PongPlayer2Fire"))
-            {
-                if (player2Cooldown <= 0)
-                {
-                    var newProjectile2 = Instantiate(projectilePrefab, projectileLoc.position, projectileLoc.rotation);
-                    newProjectile2.tag = "PongRightPlayerProjectile";
-                    newProjectile2.transform.parent = gameObject.transform.parent;
-                    player2Cooldown = projectileCooldown;
-                    soundEffect.Play();
-                }
-            }
-        }
-        else
+
+
+
+
+        //if (PongPlayerOne)
+        //{
+        //    motion = Input.GetAxisRaw("PongPlayer1Movement");
+        //    if (Input.GetButtonDown("PongPlayer1Fire"))
+        //    {
+        //        if (player1Cooldown <= 0 && isAI == false)
+        //        {
+        //            var newProjectile1 = Instantiate(projectilePrefab, projectileLoc.position, projectileLoc.rotation);
+        //            newProjectile1.tag = "PongLeftPlayerProjectile";
+        //            newProjectile1.transform.parent = gameObject.transform.parent;
+        //            player1Cooldown = projectileCooldown;
+        //            soundEffect.Play();
+        //        }
+        //    }
+        //}
+        //else if (gameController.twoPlayerToggle.toggle.isOn)
+        //{
+        //    motion = Input.GetAxisRaw("PongPlayer2Movement");
+        //    if (Input.GetButtonDown("PongPlayer2Fire"))
+        //    {
+        //        if (player2Cooldown <= 0)
+        //        {
+        //            var newProjectile2 = Instantiate(projectilePrefab, projectileLoc.position, projectileLoc.rotation);
+        //            newProjectile2.tag = "PongRightPlayerProjectile";
+        //            newProjectile2.transform.parent = gameObject.transform.parent;
+        //            player2Cooldown = projectileCooldown;
+        //            soundEffect.Play();
+        //        }
+        //    }
+        //}
+
+        if (!gameController.twoPlayerToggle.toggle.isOn && PongPlayerOne == false) // AI
         {
             if (player2Cooldown <= 0)
             {
