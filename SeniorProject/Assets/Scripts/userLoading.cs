@@ -25,9 +25,13 @@ public class userLoading : MonoBehaviour
     private float snakeScore1;
     private float snakeScore2;
     private float snakeScore3;
+    private string qestion;
+    private string ansewer;
 
     public string InputUsername;
     public string InputPassword;
+    public string InputQuestion;
+    public string InputAnswer;
     private int lineinText = 0;
     private string copy;
     
@@ -37,6 +41,11 @@ public class userLoading : MonoBehaviour
 
     public TMP_InputField userName;
     public TMP_InputField userPassword;
+
+    public TMP_InputField questionText;
+    public TMP_InputField ansewerText;
+
+
     public GameObject newuserError;
     public GameObject LogInError;
     public MenuButtionChange MenuChange;
@@ -153,6 +162,9 @@ public class userLoading : MonoBehaviour
         userPassword.contentType = TMP_InputField.ContentType.Password;
         InputPassword = userPassword.text;
 
+        InputQuestion = questionText.GetComponent<TMP_InputField>().text;
+        InputAnswer = ansewerText.GetComponent<TMP_InputField>().text;
+
         foreach (string line in File.ReadAllLines(paths))
         {
             string[] data = line.Split(';');
@@ -183,7 +195,7 @@ public class userLoading : MonoBehaviour
         }
         else
         {
-            string newUser = InputUsername + ";" + InputPassword + ";1.0;1.0;w;s;a;d;0.0;0.0;0.0";
+            string newUser = InputUsername + ";" + InputPassword + ";1.0;1.0;w;s;a;d;0.0;0.0;0.0" + InputQuestion + InputAnswer;
             File.AppendAllText(paths, newUser + Environment.NewLine);
             ReadString(paths);
             MenuChange.OnMouseUpAsButton();
@@ -193,5 +205,78 @@ public class userLoading : MonoBehaviour
 
     }
 
+    void passwordReset()
+    {
+        //will reset the password
+        // getting the data
+        InputUsername = userName.GetComponent<TMP_InputField>().text;
+        userPassword.contentType = TMP_InputField.ContentType.Password;
+        InputPassword = userPassword.text;
+        //will look through the file to find the user name
+        foreach (string line in File.ReadAllLines(paths))
+        {
+            string[] data = line.Split(';');
 
+            username = data[0];
+            password = data[1];
+
+            if (username == InputUsername)
+            {
+                isAUser = true;
+                lineinText = counter;
+            }
+            counter++;
+        }
+
+        if (isAUser == true)
+        {
+        }
+
+        if (isAUser == false)
+        {
+            LogInError.SetActive(true);
+        }
+        isAUser = false;
+    }
+
+    void addProperty()
+    {
+        int count = 0;
+
+        
+        string[] sizing = System.IO.File.ReadAllLines(paths);
+        int size = sizing.Length;
+
+        string[] Lines = new string[size];
+
+        foreach (string line in File.ReadAllLines(paths))
+        {
+            string[] data = line.Split(';');
+            username = data[0];
+            password = data[2];
+            float.TryParse(data[2], out brightness);
+            float.TryParse(data[3], out sound);
+            snakeup = data[0];
+            snakedown = data[0];
+            snakeleft = data[0];
+            snakeright = data[0];
+            float.TryParse(data[8], out snakeScore1);
+            float.TryParse(data[9], out snakeScore2);
+            float.TryParse(data[10], out snakeScore3);
+            // the new data
+            // question
+            //answer 
+            qestion = "";
+            ansewer = "";
+            
+            copy = username + ";" + password + ";" + brightness + ";" + sound + ";" + snakeup + ";" +
+                snakedown + ";" + snakeleft + ";" + snakeright + ";" + snakeScore1 + ";" +
+                snakeScore2 + ";" + snakeScore3
+                // adding
+                + ";" + qestion + ";" + ansewer;
+            
+            
+
+        }
+    }
 }
