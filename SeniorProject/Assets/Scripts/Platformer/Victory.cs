@@ -7,6 +7,7 @@ public class Victory : MonoBehaviour
 
     public GameObject cam1;
     public GameObject cam2;
+    public GameObject cam3;
     public GameObject char1;
     public GameObject char2;
     public GameObject Vic;
@@ -17,6 +18,7 @@ public class Victory : MonoBehaviour
     {
         cam1.SetActive(true);
         cam2.SetActive(false);
+        cam3.SetActive(false);
         char1.SetActive(true);
         char2.SetActive(false);
         Vic.SetActive(false);

@@ -9,9 +9,14 @@ public class PlatformerTimer : MonoBehaviour
 
     public float time;
     public float time2;
+    public float seconds;
+    public float minutes;
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI timeText2;
+    public GameObject TimeFUser;
 
+    public TextMeshProUGUI endSec;
+    public TextMeshProUGUI endmin;
 
 
 
@@ -20,11 +25,12 @@ public class PlatformerTimer : MonoBehaviour
     {
         time = 0;
         time2 = 0;
+        seconds = 0;
+        minutes = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void timeer() {
+
         time += 1 * Time.deltaTime;
         timeText.text = time.ToString("00");
         if (time >= 60)
@@ -32,6 +38,27 @@ public class PlatformerTimer : MonoBehaviour
             time2++;
             timeText2.text = time2.ToString("00");
             time = 0;
+        }
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
+
+        if (TimeFUser.activeInHierarchy)
+        {
+            seconds = time;
+            endSec.text = seconds.ToString("00");
+            minutes = time2;
+            endmin.text = minutes.ToString("00");
+
+        }
+        else {
+
+            timeer();
+
+
         }
     }
 }
