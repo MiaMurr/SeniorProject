@@ -11,6 +11,10 @@ public class PlatformerTimer : MonoBehaviour
     public float time2;
     public float seconds;
     public float minutes;
+    public float Lowestime;
+    public float Minutes;
+    public float Seconds;
+    public float Low;
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI timeText2;
     public GameObject TimeFUser;
@@ -18,6 +22,8 @@ public class PlatformerTimer : MonoBehaviour
     public TextMeshProUGUI endSec;
     public TextMeshProUGUI endmin;
 
+    //public TextMeshProUGUI FastestSec;
+    public TextMeshProUGUI FastestMin;
 
 
     // Start is called before the first frame update
@@ -53,6 +59,38 @@ public class PlatformerTimer : MonoBehaviour
             minutes = time2;
             endmin.text = minutes.ToString("00");
 
+            Minutes = minutes * 100;
+            Seconds = seconds;
+            Lowestime = Minutes + Seconds;
+
+            Low = PlayerPrefs.GetFloat("Lowestime");
+
+            FastestMin.text = Low.ToString("0");
+            FastestMin.text = FastestMin.text.Insert(1, ":");
+
+            if (Lowestime < 960) {
+
+                FastestMin.text = FastestMin.text.Insert(0, "0");
+            }
+
+            if (PlayerPrefs.GetFloat("Lowestime") == 0f)
+            {
+
+                PlayerPrefs.SetFloat("Lowestime", Lowestime);
+
+
+            }
+
+            if (Lowestime < PlayerPrefs.GetFloat("Lowestime"))
+            {
+
+                PlayerPrefs.SetFloat("Lowestime", Lowestime);
+               
+
+            }
+
+
+
         }
         else {
 
@@ -60,5 +98,9 @@ public class PlatformerTimer : MonoBehaviour
 
 
         }
+
+
+
+        
     }
 }

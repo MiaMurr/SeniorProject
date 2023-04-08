@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.014822562, g: 0.008969646, b: 0.072823144, a: 1}
+  m_IndirectSpecularColor: {r: 0.01485719, g: 0.008939541, b: 0.072804675, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16814,7 +16814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1840480394
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18099,7 +18099,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d1c3137b78d5c1f44a8d42644068f85f, type: 2}
+  - {fileID: 2100000, guid: 5cf0708ea1aa91b409a206d411511f72, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18141,8 +18141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b9c39117dadf845a64d62af969cfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  sceneName: 
+  type: level
+  sceneName: Platformer
   presentMenu: {fileID: 0}
   nextMenu: {fileID: 0}
 --- !u!1 &2027003223

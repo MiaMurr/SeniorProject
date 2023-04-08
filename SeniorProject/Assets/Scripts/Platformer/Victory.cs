@@ -51,9 +51,14 @@ public class Victory : MonoBehaviour
         else {
 
             mis.SetActive(true);
-            //WaitForSeconds(10);
-           // mis.SetActive(false);
+            Invoke("dela", 5);
+
         }
 
+    }
+
+    void dela()
+    {
+        mis.SetActive(false);
     }
 }

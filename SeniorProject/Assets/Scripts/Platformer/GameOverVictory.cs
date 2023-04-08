@@ -15,6 +15,8 @@ public class GameOverVictory : MonoBehaviour
     public GameObject Vic;
     public GameObject mis;
     public GameObject GameOverScreen;
+    public GameObject PlayingScreen;
+    public int count;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class GameOverVictory : MonoBehaviour
         Vic.SetActive(false);
         mis.SetActive(false);
         GameOverScreen.SetActive(false);
+        count = 0;
 
         if (Username == null)
         {
@@ -39,8 +42,8 @@ public class GameOverVictory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        if (other.tag == "Player" /*&& KeyCollection.score == 3*/)
+        count++;
+        if (other.tag == "Player" && KeyCollection.score == 3)
         {
             //KeyCollection.score -= 3;
             cam1.SetActive(false);
@@ -50,17 +53,21 @@ public class GameOverVictory : MonoBehaviour
             Vic.SetActive(false);
             other.gameObject.SetActive(false);
             GameOverScreen.SetActive(true);
+            PlayingScreen.SetActive(false);
         }
         else
         {
 
             mis.SetActive(true);
-            //WaitForSeconds(10);
-            // mis.SetActive(false);
+            Invoke("dela", 5);
         }
 
     }
     // Update is called once per frame
+
+    void dela() {
+        mis.SetActive(false);
+    }
     void Update()
     {
         
