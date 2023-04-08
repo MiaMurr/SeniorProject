@@ -34,7 +34,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn1++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-38.0400009f, 0.850000024f, 12.1400003f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-14.7299995f, 12.8400002f, -0.805999994f), Quaternion.identity);
 
                     break;
                 case 2:
@@ -44,7 +44,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn2++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-37.9399986f, 0.850000024f, 9.38000011f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-14.7299995f, 4.19999981f, -0.805999994f), Quaternion.identity);
 
                     break;
                 case 3:
@@ -54,7 +54,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn3++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-37.9399986f, 0.850000024f, 3.6500001f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-24.8600006f, 1.51999998f, -0.805999994f), Quaternion.identity);
 
                     break;
                 case 4:
@@ -64,7 +64,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn4++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-37.0099983f, 0.850000024f, -11.4799995f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-29.2600002f, 7.46000004f, -0.805999994f), Quaternion.identity);
 
                     break;
                 case 5:
@@ -74,7 +74,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn5++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-29.5100002f, 0.850000024f, -8.46000004f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-37.8499985f, 4.46999979f, -0.805999994f), Quaternion.identity);
 
                     break;
                 case 6:
@@ -84,7 +84,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn6++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-24.9400005f, 0.850000024f, 0.930000007f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-37.9300003f, 12.8000002f, -0.805999994f), Quaternion.identity);
 
                     break;
                 case 7:
@@ -94,7 +94,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn7++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-29.5200005f, 0.850000024f, 6.78000021f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-37.9300003f, 10.1099997f, -0.805999994f), Quaternion.identity);
 
                     break;
                 case 8:
@@ -104,7 +104,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn8++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-14.6999998f, 0.850000024f, 12.1199999f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-36.9099998f, -10.8100004f, -0.805999994f), Quaternion.identity);
 
                     break;
                 case 9:
@@ -114,7 +114,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn9++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-14.46f, 0.850000024f, -8.47999954f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-29.6100006f, -7.78999996f, -0.805999994f), Quaternion.identity);
 
                     break;
                 case 10:
@@ -124,7 +124,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn10++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-14.6999998f, 0.850000024f, 3.41000009f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-14.4499998f, -7.67999983f, -0.805999994f), Quaternion.identity);
                     break;
                 case 11:
                     if (Spawn11 > 0)
@@ -133,7 +133,7 @@ public class Maze2keySpawner : MonoBehaviour
                     }
                     Spawn11++;
                     loop++;
-                    Instantiate(prefab, new Vector3(-14.46f, 0.850000024f, -14.1400003f), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(-14.4499998f, -13.4899998f, -0.805999994f), Quaternion.identity);
                     break;
                 default:
 
