@@ -14,16 +14,22 @@ public class Movement2 : MonoBehaviour
     public float force = 10;
 
     public float Jump = 8;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] LayerMask ground;
 
     //public void AddForce(Vector3 force, ForceMode mode = ForceMode.Force;
 
     public void OnJump() {
 
-        //player.AddForce();
-        player.AddForce(0, Jump, 0, ForceMode.Impulse);
-        //player.AddForce(Physics.gravity * (gravityW - 1) * player.mass);
-        //Debug.Log("W");
+        if (IsGround())
+        {
+            player.AddForce(0, Jump, 0, ForceMode.Impulse);
+        }
+        
 
+    }
+    bool IsGround() {
+        return Physics.CheckSphere(groundCheck.position, .1f, ground);
     }
 
     public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
@@ -35,7 +41,6 @@ public class Movement2 : MonoBehaviour
     void Update()
     {
         moveplayer();
-        //OnJump();
     }
 
     private void OnTriggerEnter(Collider other)
