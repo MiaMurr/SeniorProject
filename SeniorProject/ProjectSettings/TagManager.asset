@@ -46,6 +46,16 @@ TagManager:
   - user11
   - HS11
   - KeysC
+  - PlatUser1
+  - PlatUser2
+  - PlatUser3
+  - PlatUser4
+  - PlatUser5
+  - Time1
+  - Time2
+  - Time3
+  - Time4
+  - Time5
   layers:
   - Default
   - TransparentFX

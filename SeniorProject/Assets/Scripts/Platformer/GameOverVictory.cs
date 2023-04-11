@@ -18,6 +18,8 @@ public class GameOverVictory : MonoBehaviour
     public GameObject PlayingScreen;
     public int count;
 
+    public userLoading userLoading = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,7 @@ public class GameOverVictory : MonoBehaviour
         count++;
         if (other.tag == "Player" && KeyCollection.score == 3)
         {
+            userLoading.Gamescore();
             //KeyCollection.score -= 3;
             cam1.SetActive(false);
             cam2.SetActive(true);

@@ -63,7 +63,7 @@ public class PlatformerTimer : MonoBehaviour
             Seconds = seconds;
             Lowestime = Minutes + Seconds;
 
-            Low = PlayerPrefs.GetFloat("Lowestime");
+            Low = PlayerPrefs.GetFloat("HighScore2");
 
             FastestMin.text = Low.ToString("0");
             FastestMin.text = FastestMin.text.Insert(1, ":");
@@ -73,18 +73,18 @@ public class PlatformerTimer : MonoBehaviour
                 FastestMin.text = FastestMin.text.Insert(0, "0");
             }
 
-            if (PlayerPrefs.GetFloat("Lowestime") == 0f)
+            if (PlayerPrefs.GetFloat("HighScore2") == 0f)
             {
 
-                PlayerPrefs.SetFloat("Lowestime", Lowestime);
+                PlayerPrefs.SetFloat("HighScore2", Lowestime);
 
 
             }
 
-            if (Lowestime < PlayerPrefs.GetFloat("Lowestime"))
+            if (Lowestime < PlayerPrefs.GetFloat("HighScore2"))
             {
 
-                PlayerPrefs.SetFloat("Lowestime", Lowestime);
+                PlayerPrefs.SetFloat("HighScore2", Lowestime);
                
 
             }
