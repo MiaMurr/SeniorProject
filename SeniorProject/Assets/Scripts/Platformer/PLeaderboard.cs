@@ -90,24 +90,89 @@ public class PLeaderboard : MonoBehaviour
         PlatUser1.text = " " + Sorted.ElementAt(0).Key;
         Time1.text = " " + Sorted.ElementAt(0).Value;
         
-        float iye = float.Parse(Time1.text, System.Globalization.NumberStyles.Float);
-        
-        Time1.text = string.Format("{0:##}", iye);
-        Time1.text = Time1.text.Insert(1, ":");
-        if (iye < 960f)
-        {
+        float T1 = float.Parse(Time1.text, System.Globalization.NumberStyles.Float);
 
+        if (T1 < 960f)
+        {
+            Time1.text = string.Format("{0:##}", T1);
+            Time1.text = Time1.text.Insert(1, ":");
             Time1.text = Time1.text.Insert(0, "0");
+
+        }
+        else
+        {
+            Time2.text = Time2.text.Insert(3, ":");
         }
 
         PlatUser2.text = " " + Sorted.ElementAt(1).Key;
         Time2.text = " " + Sorted.ElementAt(1).Value;
+
+
+        float T2 = float.Parse(Time2.text, System.Globalization.NumberStyles.Float);
+
+        if (T2 < 960f)
+        {
+            Time2.text = string.Format("{0:##}", T2);
+            Time2.text = Time2.text.Insert(1, ":");
+            Time2.text = Time2.text.Insert(0, "0");
+
+        }
+        else
+        {
+            Time2.text = Time2.text.Insert(3, ":");
+        }
+
         PlatUser3.text = " " + Sorted.ElementAt(2).Key;
         Time3.text = " " + Sorted.ElementAt(2).Value;
+
+        float T3 = float.Parse(Time3.text, System.Globalization.NumberStyles.Float);
+
+        if (T3 < 960f)
+        {
+            Time3.text = string.Format("{0:##}", T3);
+            Time3.text = Time3.text.Insert(1, ":");
+            Time3.text = Time3.text.Insert(0, "0");
+
+        }
+        else
+        {
+            Time3.text = Time3.text.Insert(3, ":");
+        }
+
         PlatUser4.text = " " + Sorted.ElementAt(3).Key;
         Time4.text = " " + Sorted.ElementAt(3).Value;
+
+        float T4 = float.Parse(Time4.text, System.Globalization.NumberStyles.Float);
+
+        
+        
+        if (T4 < 960f)
+        {
+            Time4.text = string.Format("{0:##}", T4);
+            Time4.text = Time4.text.Insert(1, ":");
+            Time4.text = Time4.text.Insert(0, "0");
+            
+        }
+        else {
+            Time4.text = Time4.text.Insert(3, ":");
+        }
+
         PlatUser5.text = " " + Sorted.ElementAt(4).Key;
         Time5.text = " " + Sorted.ElementAt(4).Value;
+
+        float T5 = float.Parse(Time5.text, System.Globalization.NumberStyles.Float);
+
+        if (T5 < 960f)
+        {
+            Time5.text = string.Format("{0:##}", T5);
+            Time5.text = Time5.text.Insert(1, ":");
+            Time5.text = Time5.text.Insert(0, "0");
+
+        }
+        else
+        {
+            Time5.text = Time5.text.Insert(3, ":");
+        }
         //user6.text = " " + Sorted.ElementAt(5).Key;
         //HS6.text = " " + Sorted.ElementAt(5).Value;
         //user7.text = " " + Sorted.ElementAt(6).Key;
