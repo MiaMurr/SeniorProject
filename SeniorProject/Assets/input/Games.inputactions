@@ -102,14 +102,14 @@
             ]
         },
         {
-            "name": "Game2",
+            "name": "Platformer1",
             "id": "8ccdfe1e-6a07-4a0a-b7af-156c586d5587",
             "actions": [
                 {
                     "name": "Movement",
                     "type": "Value",
                     "id": "169236b4-0632-4e54-92ed-87679a6ad49f",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -119,7 +119,7 @@
                 {
                     "name": "WSAD",
                     "id": "fe148877-e64c-44a9-9db3-3f27122ef16d",
-                    "path": "2DVector",
+                    "path": "3DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -129,8 +129,8 @@
                 },
                 {
                     "name": "Up",
-                    "id": "c80a2afd-6368-4eba-9bfb-fdcfb78c9406",
-                    "path": "<Keyboard>/w",
+                    "id": "8ca774d2-7c84-4ccd-9817-da18ad710248",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -140,8 +140,8 @@
                 },
                 {
                     "name": "Down",
-                    "id": "ce8755fd-36f2-4f80-898d-eb14300979c3",
-                    "path": "<Keyboard>/s",
+                    "id": "ce617e6a-d364-423d-a848-bba8b934107f",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -151,7 +151,7 @@
                 },
                 {
                     "name": "Left",
-                    "id": "8ca774d2-7c84-4ccd-9817-da18ad710248",
+                    "id": "d83091aa-5078-4599-9a15-5bec7b36dee5",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -162,8 +162,30 @@
                 },
                 {
                     "name": "Right",
-                    "id": "ce617e6a-d364-423d-a848-bba8b934107f",
+                    "id": "e942ed75-5543-4edf-83fb-e73b3fceb2ab",
                     "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Forward",
+                    "id": "24888145-0fc1-4fbe-b956-1ef5780637df",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Backward",
+                    "id": "946dff73-90bf-40d4-920f-1d2468efddb0",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -202,7 +224,7 @@
             ]
         },
         {
-            "name": "Game3",
+            "name": "Platformer2",
             "id": "9747da56-50fc-46a7-b751-d40cceafa027",
             "actions": [
                 {
@@ -261,7 +283,7 @@
                 {
                     "name": "",
                     "id": "6946c640-2ffb-42cf-aebc-bbc4b4b34497",
-                    "path": "<Keyboard>/#(W)",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
