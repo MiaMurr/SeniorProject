@@ -185,7 +185,7 @@ public class PLeaderboard : MonoBehaviour
         //HS10.text = " " + Sorted.ElementAt(9).Value;
         //user11.text = " " + Sorted.ElementAt(0).Key;
         //HS11.text = " " + Sorted.ElementAt(0).Value;
-        Debug.Log($"Just Value: {Sorted.ElementAt(0).Value}");
+        //Debug.Log($"Just Value: {Sorted.ElementAt(0).Value}");
     }
 
     void Start()

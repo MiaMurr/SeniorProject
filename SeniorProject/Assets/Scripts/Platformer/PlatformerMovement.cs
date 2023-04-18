@@ -11,6 +11,8 @@ public class PlatformerMovement : MonoBehaviour
     private Vector3 playerMove;
     [SerializeField] private float snakeTurn;
     public float key = 1;
+    [SerializeField] private float wait = 5f;
+    bool Delay = true;
 
     public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
                                              //relating to buttion behavoiour
@@ -18,9 +20,29 @@ public class PlatformerMovement : MonoBehaviour
         playerMove = input.Get<Vector3>(); // WASD is connected to a certian direction of vector 3
     }
 
+    void Start() {
+    }
+
     void Update()
     {
+        //Debug.Log(Delay);
         moveplayer();
+
+
+
+        if ((Input.GetKeyDown("left shift") || Input.GetKeyDown("right shift")) && Delay)
+        {
+            sprint();
+
+            Delay = false;
+
+            Invoke("Timer", wait);
+        }
+
+        else if (Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift"))
+        {
+            speed = speed - 3f;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,9 +56,22 @@ public class PlatformerMovement : MonoBehaviour
 
     }
 
-    void moveplayer()
+    void Timer()
     {
 
+        Delay = true;
+
+    }
+
+    void sprint() {
+
+        speed = speed + 3f;
+
+    }
+
+    void moveplayer()
+    {
+       
         // If makes it that once rotation is done it will stay in that direction
         if (playerMove.magnitude == 0)
         {
