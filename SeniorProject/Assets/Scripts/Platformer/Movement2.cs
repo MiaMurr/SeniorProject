@@ -10,8 +10,16 @@ public class Movement2 : MonoBehaviour
     [SerializeField] private float speed;
     private Vector3 playerMove;
     [SerializeField] private float snakeTurn;
+    [SerializeField] private float wait = 5f;
+    private int Done = 1;
     public float key = 1;
     public float force = 10;
+
+    bool Delay = true;
+
+    public GameObject A;
+    public GameObject B;
+    public float time;
 
     public float Jump = 8;
     [SerializeField] Transform groundCheck;
@@ -41,6 +49,72 @@ public class Movement2 : MonoBehaviour
     void Update()
     {
         moveplayer();
+
+        if (time == 1)
+        {
+            B.SetActive(true);
+        }
+
+        if (time == 0)
+        {
+            B.SetActive(false);
+        }
+        if (Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift") && Delay && Done == 1)
+        {
+            time += 1;
+
+            Debug.Log("Sprinting");
+            sprint();
+
+            Delay = false;
+
+
+            Invoke("Timer", wait);
+            Invoke("SprintAct", wait);
+
+
+            StartCoroutine(Wait());
+
+
+        }
+    }
+
+    IEnumerator Wait()
+    {
+        Done = 2;
+        Debug.Log("wait");
+
+        yield return new WaitForSeconds(10f);
+
+        Debug.Log(time.ToString("00"));
+        Debug.Log("Im done waiting");
+        time -= 1;
+        Done = 1;
+
+
+    }
+
+    void SprintAct()
+    {
+
+
+        speed = speed - 3f;
+
+    }
+
+
+    void Timer()
+    {
+
+        Delay = true;
+
+    }
+
+    void sprint()
+    {
+
+        speed = speed + 3f;
+
     }
 
     private void OnTriggerEnter(Collider other)

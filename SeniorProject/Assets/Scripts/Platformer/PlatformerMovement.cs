@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlatformerMovement : MonoBehaviour
 {
@@ -10,9 +11,14 @@ public class PlatformerMovement : MonoBehaviour
     [SerializeField]private float speed;
     private Vector3 playerMove;
     [SerializeField] private float snakeTurn;
+    private int Done = 1;
     public float key = 1;
     [SerializeField] private float wait = 5f;
     bool Delay = true;
+
+    public GameObject A;
+    public GameObject B;
+    public float time;
 
     public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
                                              //relating to buttion behavoiour
@@ -21,6 +27,9 @@ public class PlatformerMovement : MonoBehaviour
     }
 
     void Start() {
+        time = 0;
+        A.SetActive(true);
+        B.SetActive(false);
     }
 
     void Update()
@@ -28,21 +37,55 @@ public class PlatformerMovement : MonoBehaviour
         //Debug.Log(Delay);
         moveplayer();
 
+        if (time == 1) {
+            B.SetActive(true);
+        }
 
-
-        if ((Input.GetKeyDown("left shift") || Input.GetKeyDown("right shift")) && Delay)
+        if (time == 0)
         {
+            B.SetActive(false);
+        }
+        if (Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift") && Delay && Done == 1)
+        {
+            time += 1;
+            
+            Debug.Log("Sprinting");
             sprint();
 
             Delay = false;
 
+
             Invoke("Timer", wait);
+            Invoke("SprintAct", wait);
+
+            
+            StartCoroutine(Wait());
+
+
         }
 
-        else if (Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift"))
-        {
-            speed = speed - 3f;
-        }
+    }
+
+    IEnumerator Wait()
+    {
+        Done = 2;
+        Debug.Log("wait");
+
+        yield return new WaitForSeconds(10f);
+        
+        Debug.Log(time.ToString("00"));
+        Debug.Log("Im done waiting");
+        time -= 1;
+        Done = 1;
+        
+
+    }
+
+    void SprintAct() {
+
+
+        speed = speed - 3f;
+
     }
 
     private void OnTriggerEnter(Collider other)
