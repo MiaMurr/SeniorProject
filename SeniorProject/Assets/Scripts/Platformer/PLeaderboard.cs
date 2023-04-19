@@ -15,6 +15,7 @@ public class PLeaderboard : MonoBehaviour
     public TMP_Text PlatUser4;
     public TMP_Text PlatUser5;
 
+    public TMP_Text PlatV;
 
     public TMP_Text Time1;
     public TMP_Text Time2;
@@ -22,6 +23,7 @@ public class PLeaderboard : MonoBehaviour
     public TMP_Text Time4;
     public TMP_Text Time5;
 
+    public TMP_Text TimeV;
 
 
 
@@ -87,6 +89,23 @@ public class PLeaderboard : MonoBehaviour
         }
         //Debug.Log($"Just Key: {Sorted.ElementAt(1).Key}");
 
+        PlatV.text = " " + Sorted.ElementAt(0).Key;
+        TimeV.text = " " + Sorted.ElementAt(0).Value;
+
+        float V1 = float.Parse(TimeV.text, System.Globalization.NumberStyles.Float);
+
+        if (V1 < 960f)
+        {
+            TimeV.text = string.Format("{0:##}", V1);
+            TimeV.text = TimeV.text.Insert(1, ":");
+            TimeV.text = TimeV.text.Insert(0, "0");
+
+        }
+        else
+        {
+            TimeV.text = TimeV.text.Insert(3, ":");
+        }
+
         PlatUser1.text = " " + Sorted.ElementAt(0).Key;
         Time1.text = " " + Sorted.ElementAt(0).Value;
         
@@ -101,7 +120,7 @@ public class PLeaderboard : MonoBehaviour
         }
         else
         {
-            Time2.text = Time2.text.Insert(3, ":");
+            Time1.text = Time1.text.Insert(3, ":");
         }
 
         PlatUser2.text = " " + Sorted.ElementAt(1).Key;
@@ -224,6 +243,13 @@ public class PLeaderboard : MonoBehaviour
             PlatUser5 = GameObject.FindWithTag("PlatUser5")
                 .GetComponent<TMP_Text>();
         }
+
+        if (PlatV == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            PlatUser1 = GameObject.FindWithTag("FN")
+                .GetComponent<TMP_Text>();
+        }
         //if (user6 == null)
         //{
         //    Finds the tag on the text field and gets whats being held
@@ -293,6 +319,13 @@ public class PLeaderboard : MonoBehaviour
         {
             //Finds the tag on the text field and gets whats being held
             Time5 = GameObject.FindWithTag("Time5")
+                .GetComponent<TMP_Text>();
+        }
+
+        if (TimeV == null)
+        {
+            //Finds the tag on the text field and gets whats being held
+            Time5 = GameObject.FindWithTag("FT")
                 .GetComponent<TMP_Text>();
         }
         //if (HS6 == null)

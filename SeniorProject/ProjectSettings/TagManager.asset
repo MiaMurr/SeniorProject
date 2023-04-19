@@ -56,6 +56,8 @@ TagManager:
   - Time3
   - Time4
   - Time5
+  - FT
+  - FN
   layers:
   - Default
   - TransparentFX
