@@ -45,7 +45,7 @@ public class PlatformerMovement : MonoBehaviour
         {
             B.SetActive(false);
         }
-        if (Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift") && Delay && Done == 1)
+        if ((Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift")) && Delay && Done == 1)
         {
             time += 1;
             
