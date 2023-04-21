@@ -13,13 +13,16 @@ public class Victory : MonoBehaviour
     public GameObject Vic;
     public GameObject mis;
 
+    public GameObject Timer;
+    public GameObject Goal;
+    public GameObject UI;
     // Start is called before the first frame update
     void Start()
     {
         cam1.SetActive(true);
         cam2.SetActive(false);
         cam3.SetActive(false);
-        char1.SetActive(true);
+        //char1.SetActive(true);
         char2.SetActive(false);
         Vic.SetActive(false);
         mis.SetActive(false);
@@ -44,7 +47,10 @@ public class Victory : MonoBehaviour
             cam1.SetActive(false);
             cam2.SetActive(true);
             char1.SetActive(false);
-            char2.SetActive(true);
+            //char2.SetActive(true);
+            UI.SetActive(false);
+            Timer.SetActive(false);
+            Goal.SetActive(true);
             Vic.SetActive(false);
             other.gameObject.SetActive(false);
         }
