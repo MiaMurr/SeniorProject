@@ -58,6 +58,7 @@ TagManager:
   - Time5
   - FT
   - FN
+  - Wall
   layers:
   - Default
   - TransparentFX

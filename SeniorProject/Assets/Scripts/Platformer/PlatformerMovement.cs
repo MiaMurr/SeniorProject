@@ -15,6 +15,7 @@ public class PlatformerMovement : MonoBehaviour
     public float key = 1;
     [SerializeField] private float wait = 5f;
     bool Delay = true;
+    public float Push = 50f;
 
     public GameObject A;
     public GameObject B;
@@ -23,6 +24,7 @@ public class PlatformerMovement : MonoBehaviour
     public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
                                              //relating to buttion behavoiour
     {
+       
         playerMove = input.Get<Vector3>(); // WASD is connected to a certian direction of vector 3
     }
 
@@ -88,8 +90,23 @@ public class PlatformerMovement : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "Wall")
+        {
+            Debug.Log("I'm hitting a Wall");
+            Vector3 dir = collision.contacts[0].point - transform.position;
+
+            dir = -dir.normalized;
+
+            GetComponent<Rigidbody>().AddForce(dir * Push);
+        }
+    }
+
+        private void OnTriggerEnter(Collider other)
+    {
+
+       
 
         if (other.tag == "Key")
         {
