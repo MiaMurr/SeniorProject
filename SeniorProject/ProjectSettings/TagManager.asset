@@ -59,6 +59,8 @@ TagManager:
   - FT
   - FN
   - Wall
+  - Ob
+  - Ob2
   layers:
   - Default
   - TransparentFX

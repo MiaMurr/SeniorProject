@@ -101,6 +101,7 @@ public class PlatformerMovement : MonoBehaviour
 
             GetComponent<Rigidbody>().AddForce(dir * Push);
         }
+
     }
 
         private void OnTriggerEnter(Collider other)
