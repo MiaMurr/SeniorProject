@@ -12982,7 +12982,6 @@ GameObject:
   - component: {fileID: 1814217259}
   - component: {fileID: 1814217257}
   - component: {fileID: 1814217262}
-  - component: {fileID: 1814217263}
   m_Layer: 0
   m_Name: Food
   m_TagString: Food
@@ -13083,18 +13082,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridView: {fileID: 1044201748}
   ScoreValue: 10
---- !u!114 &1814217263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814217256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e716124dd04af42a0895b949f45f91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   RotationbySecond: 40
   Frequency: 0.7
   Hight: 0.4
