@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17333557, g: 0.2166674, b: 0.29872683, a: 1}
+  m_IndirectSpecularColor: {r: 0.1733353, g: 0.21666707, b: 0.29872632, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4237,6 +4237,14 @@ MonoBehaviour:
   sceneName: MainMenu
   presentMenu: {fileID: 0}
   nextMenu: {fileID: 0}
+  presentMenu1: {fileID: 0}
+  nextMenu1: {fileID: 0}
+  presentMenu2: {fileID: 0}
+  nextMenu2: {fileID: 0}
+  presentMenu3: {fileID: 0}
+  nextMenu3: {fileID: 0}
+  presentMenu4: {fileID: 0}
+  nextMenu4: {fileID: 0}
 --- !u!1 &756282546
 GameObject:
   m_ObjectHideFlags: 0
@@ -4388,6 +4396,14 @@ MonoBehaviour:
   sceneName: Level1Snake
   presentMenu: {fileID: 0}
   nextMenu: {fileID: 0}
+  presentMenu1: {fileID: 0}
+  nextMenu1: {fileID: 0}
+  presentMenu2: {fileID: 0}
+  nextMenu2: {fileID: 0}
+  presentMenu3: {fileID: 0}
+  nextMenu3: {fileID: 0}
+  presentMenu4: {fileID: 0}
+  nextMenu4: {fileID: 0}
 --- !u!1 &777505450
 GameObject:
   m_ObjectHideFlags: 0
@@ -16039,12 +16055,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputUsername: 
   InputPassword: 
+  InputQuestion: 
+  InputAnswer: 
   counter: 0
   userName: {fileID: 0}
   userPassword: {fileID: 0}
+  userPasswordOBJ: {fileID: 0}
+  questionText: {fileID: 0}
+  questionTextOBJ: {fileID: 0}
+  ansewerText: {fileID: 0}
+  ansewerTextOBJ: {fileID: 0}
   newuserError: {fileID: 0}
   LogInError: {fileID: 0}
+  UserError: {fileID: 0}
   MenuChange: {fileID: 0}
+  userButtion: {fileID: 0}
+  passwordresetButtion: {fileID: 0}
   login: 0
 --- !u!4 &2131643551
 Transform:
