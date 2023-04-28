@@ -22,6 +22,7 @@ public class PlatformerMovement : MonoBehaviour
     public float time;
 
     public float range = .8f;
+    bool cancel = false;
 
     public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
                                              //relating to buttion behavoiour
@@ -53,13 +54,22 @@ public class PlatformerMovement : MonoBehaviour
 
             if ((hit.collider.tag == "Wall") && Delay == false)
             {
-
+                cancel = true;
                 Debug.Log("Hitting wall");
                 Timer();
                 SprintAct();
                 time -= 1;
                 Done = 1;
+            } else if (cancel == false && Delay == false) {
+
+                Invoke("Timer", wait);
+                Invoke("SprintAct", wait);
+
+
+                StartCoroutine(Wait());
+
             }
+
 
         }
 
@@ -80,14 +90,6 @@ public class PlatformerMovement : MonoBehaviour
 
             Delay = false;
 
-
-            
-                Invoke("Timer", wait);
-                Invoke("SprintAct", wait);
-
-
-                StartCoroutine(Wait());
-            
 
         }
 
