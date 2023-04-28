@@ -21,6 +21,8 @@ public class PlatformerMovement : MonoBehaviour
     public GameObject B;
     public float time;
 
+    public float range = .8f;
+
     public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
                                              //relating to buttion behavoiour
     {
@@ -36,8 +38,30 @@ public class PlatformerMovement : MonoBehaviour
 
     void Update()
     {
+
+        
+       
         //Debug.Log(Delay);
         moveplayer();
+
+        Vector3 dir = Vector3.forward;
+        Ray r = new Ray(transform.position, transform.TransformDirection(dir * range));
+        Debug.DrawRay(transform.position, transform.TransformDirection(dir * range));
+
+        if (Physics.Raycast(r, out RaycastHit hit, range))
+        {
+
+            if ((hit.collider.tag == "Wall") && Delay == false)
+            {
+
+                Debug.Log("Hitting wall");
+                Timer();
+                SprintAct();
+                time -= 1;
+                Done = 1;
+            }
+
+        }
 
         if (time == 1) {
             B.SetActive(true);
@@ -57,12 +81,13 @@ public class PlatformerMovement : MonoBehaviour
             Delay = false;
 
 
-            Invoke("Timer", wait);
-            Invoke("SprintAct", wait);
-
             
-            StartCoroutine(Wait());
+                Invoke("Timer", wait);
+                Invoke("SprintAct", wait);
 
+
+                StartCoroutine(Wait());
+            
 
         }
 
@@ -90,19 +115,19 @@ public class PlatformerMovement : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Wall")
-        {
-            Debug.Log("I'm hitting a Wall");
-            Vector3 dir = collision.contacts[0].point - transform.position;
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Wall")
+    //    {
+    //        Debug.Log("I'm hitting a Wall");
+    //        Vector3 dir = collision.contacts[0].point - transform.position;
 
-            dir = -dir.normalized;
+    //        dir = -dir.normalized;
 
-            GetComponent<Rigidbody>().AddForce(dir * Push);
-        }
+    //        GetComponent<Rigidbody>().AddForce(dir * Push);
+    //    }
 
-    }
+    //}
 
         private void OnTriggerEnter(Collider other)
     {

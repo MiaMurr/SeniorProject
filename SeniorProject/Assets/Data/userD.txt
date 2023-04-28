@@ -32,3 +32,4 @@ dsf;dsf;1.0;1.0;w;s;a;d;0.0;0.0;0.0;;
 sfdvzfv;sdfszdf;1.0;1.0;w;s;a;d;0.0;0.0;0.0;;
 brandX;Henderson;1;0.5377732;w;s;a;d;210;0;0;;
 sdfg;sdfg;1.0;1.0;w;s;a;d;0.0;0.0;0.0;asdf;asdf
+luisa;Lucky2002;1.232073;0;w;s;a;d;220;0;0;pet name;
