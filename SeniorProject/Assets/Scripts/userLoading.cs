@@ -53,6 +53,7 @@ public class userLoading : MonoBehaviour
     public GameObject LogInError;
     public GameObject UserError;
     public MenuButtionChange MenuChange;
+    public logoutSetting logoutSetting;
     public GameObject userButtion;
     public GameObject passwordresetButtion;
     [SerializeField] bool login = false;
@@ -65,6 +66,7 @@ public class userLoading : MonoBehaviour
         InputPassword = userPassword.text;
         
         ReadString(paths);
+        
     }
 
     private void Start()
@@ -158,6 +160,7 @@ public class userLoading : MonoBehaviour
                 if (login == true)
                 {
                     MenuChange.OnMouseUpAsButton();
+                    logoutSetting.logoutButtion();
                 }
                 PlayerPrefs.SetInt("Playerlogin", 1);
             }

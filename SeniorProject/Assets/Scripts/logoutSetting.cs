@@ -20,6 +20,10 @@ public class logoutSetting : MonoBehaviour
             menuscreen.SetActive(true);
             LogoutButtion.SetActive(true);
         }
+        else
+        {
+            LogoutButtion.SetActive(false);
+        }
     }
 
     // Update is called once per frame
