@@ -10250,10 +10250,25 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You are a green snake, that wants to eat red food pellets to grow longer.
-    \n\nbut the bigger you get the harder it is to avoid your body. \n\nIf you hit
-    your body you lose a life and restart from the middle of the map .\n\nThe more
-    you eat the higher your score!"
+  m_text: 'You are a small Bee, that want to collect the honeycombs from the hive
+    before the Wasps them.
+
+    
+
+    But the more you collect the more Wasp will
+    appear and the harder it gets.
+
+    
+
+    If you hit a wasp or a log you lose
+    a life and restart in the middle of the map.
+
+    
+
+    The more you collect
+    the higher your score!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 35f2a6b1dd8f58148b841db185b2eb59, type: 2}
   m_sharedMaterial: {fileID: -880990288799542395, guid: 35f2a6b1dd8f58148b841db185b2eb59, type: 2}
@@ -10280,8 +10295,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
