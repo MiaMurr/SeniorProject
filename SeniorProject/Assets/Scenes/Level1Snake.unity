@@ -10253,20 +10253,20 @@ MonoBehaviour:
   m_text: 'You are a small Bee, that want to collect the honeycombs from the hive
     before the Wasps them.
 
-    
 
-    But the more you collect the more Wasp will
-    appear and the harder it gets.
 
-    
+    But the more you collect the more Wasp will appear
+    and the harder it gets.
 
-    If you hit a wasp or a log you lose
-    a life and restart in the middle of the map.
 
-    
 
-    The more you collect
-    the higher your score!
+    If you hit a wasp or a log you lose a life and
+    restart in the middle of the map.
+
+
+
+    The more you collect the higher your
+    score!
 
 '
   m_isRightToLeft: 0
@@ -10295,8 +10295,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
