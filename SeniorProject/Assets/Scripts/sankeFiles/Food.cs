@@ -15,6 +15,7 @@ public class Food : MonoBehaviour
     [SerializeField] private float Frequency = 1f;
     [SerializeField] private float Hight = 3f;
     private bool state;
+    public AudioSource source;
 
 
     private void Start() {
@@ -53,6 +54,7 @@ public class Food : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
 
         if (other.tag == "Player") {
+            source.Play();
             SnakeScore.score += ScoreValue;
             state = false;
             RandomLocation();
