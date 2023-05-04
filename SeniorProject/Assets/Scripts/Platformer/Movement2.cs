@@ -25,6 +25,8 @@ public class Movement2 : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
 
+    public AudioSource KeySound;
+
     //public void AddForce(Vector3 force, ForceMode mode = ForceMode.Force;
 
     public void OnJump() {
@@ -122,6 +124,7 @@ public class Movement2 : MonoBehaviour
 
         if (other.tag == "Key")
         {
+            KeySound.Play();
             KeyCollection.score += key;
             other.gameObject.SetActive(false);
         }
