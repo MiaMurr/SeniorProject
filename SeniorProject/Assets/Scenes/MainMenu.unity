@@ -1073,6 +1073,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &31380709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,6 +1828,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &68873351
 GameObject:
   m_ObjectHideFlags: 0
@@ -3229,6 +3231,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &120398025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4892,6 +4895,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &188646840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6183,6 +6187,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &284765018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7016,6 +7021,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &320598342
 GameObject:
   m_ObjectHideFlags: 0
@@ -8197,6 +8203,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &356202012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8539,6 +8546,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &376323298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9572,6 +9580,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &426541069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10548,6 +10557,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &460974523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11657,6 +11667,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &506775534
 GameObject:
   m_ObjectHideFlags: 0
@@ -13341,6 +13352,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &601672416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13561,6 +13573,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &609496394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13683,6 +13696,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &612663481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14150,6 +14164,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &647713975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14579,6 +14594,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &668455232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16912,6 +16928,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &785162077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17804,6 +17821,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &818906617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18610,6 +18628,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &848732672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19309,6 +19328,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &885545350
 GameObject:
   m_ObjectHideFlags: 0
@@ -20938,6 +20958,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &945963390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21660,6 +21681,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &969256051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22932,6 +22954,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1016172807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23549,6 +23572,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &1055777789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24115,6 +24139,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1092518703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24409,6 +24434,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1100900527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24568,6 +24594,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1121182863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24631,6 +24658,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121182860}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1125909441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1125909443}
+  - component: {fileID: 1125909442}
+  m_Layer: 0
+  m_Name: buttonSoundSetting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1125909442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125909441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d75e0da75d0cf6438d6e9267e33a18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AudioSource: {fileID: 1279620131}
+  TheSlider: {fileID: 1029351373}
+  VolumeLevel: 1
+  userLoading1: {fileID: 1183413371}
+--- !u!4 &1125909443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125909441}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1859215, y: 7.359822, z: -1.2264616}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1135811615
 GameObject:
   m_ObjectHideFlags: 0
@@ -28123,7 +28198,7 @@ GameObject:
   - component: {fileID: 1279620132}
   - component: {fileID: 1279620131}
   m_Layer: 0
-  m_Name: EatSound
+  m_Name: buttionSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28139,7 +28214,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7d0ce312b616b2c47a7d4812c5b28ee7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4dfdaee15c854da459f52fd8f86af8de, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -29019,6 +29094,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1374348901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29394,6 +29470,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &1407043605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30292,6 +30369,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1449369611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33485,6 +33563,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 1279620131}
 --- !u!65 &1588252206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33607,6 +33686,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1597171746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34164,6 +34244,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &1615680911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34320,6 +34401,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1625542270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34612,6 +34694,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &1640224163
 GameObject:
   m_ObjectHideFlags: 0
@@ -35642,6 +35725,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1663978745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36073,6 +36157,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1691907932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36771,6 +36856,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &1724969418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39561,6 +39647,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &1856679268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41085,6 +41172,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 1279620131}
 --- !u!65 &1946334842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42902,6 +42990,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &2027003223
 GameObject:
   m_ObjectHideFlags: 0
@@ -43062,6 +43151,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &2032322137
 GameObject:
   m_ObjectHideFlags: 0
@@ -43581,6 +43671,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &2098335769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43886,6 +43977,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &2109415349
 GameObject:
   m_ObjectHideFlags: 0
@@ -44079,6 +44171,7 @@ MonoBehaviour:
   nextMenu3: {fileID: 0}
   presentMenu4: {fileID: 0}
   nextMenu4: {fileID: 0}
+  source: {fileID: 0}
 --- !u!65 &2113790402
 BoxCollider:
   m_ObjectHideFlags: 0

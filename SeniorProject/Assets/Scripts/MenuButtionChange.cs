@@ -18,23 +18,27 @@ public class MenuButtionChange : MonoBehaviour
     [SerializeField] protected GameObject nextMenu3;
     [SerializeField] protected GameObject presentMenu4;
     [SerializeField] protected GameObject nextMenu4;
+    public AudioSource source;
     public void OnMouseUpAsButton()
     {
 
         if (type.Equals("level"))
         {
             SceneManager.LoadScene(sceneName);
+            source.Play();
         }
 
         if (type.Equals("quite"))
         {
             Application.Quit();
+            source.Play();
         }
 
         if (type.Equals("menuChange"))
         {
             presentMenu.SetActive(false);
             nextMenu.SetActive(true);
+            source.Play();
         }
 
         if (type.Equals("menuChange2"))
@@ -47,6 +51,7 @@ public class MenuButtionChange : MonoBehaviour
             nextMenu3.SetActive(true);
             presentMenu4.SetActive(false);
             nextMenu4.SetActive(true);
+            source.Play();
         }
 
 
