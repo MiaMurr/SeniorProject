@@ -24,6 +24,8 @@ public class PlatformerMovement : MonoBehaviour
     public float range = .8f;
     bool cancel = false;
 
+    public AudioSource KeySound;
+
     public void OnMovement(InputValue input) // in the input menu the function is created with all properties 
                                              //relating to buttion behavoiour
     {
@@ -138,6 +140,7 @@ public class PlatformerMovement : MonoBehaviour
 
         if (other.tag == "Key")
         {
+            KeySound.Play();
             KeyCollection.score += key;
             other.gameObject.SetActive(false);
         }
