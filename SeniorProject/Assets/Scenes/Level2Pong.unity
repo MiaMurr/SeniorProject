@@ -420,7 +420,7 @@ MonoBehaviour:
   m_AudioSource: {fileID: 28950136}
   TheSlider: {fileID: 500047463}
   VolumeLevel: 1
-  userLoading1: {fileID: 0}
+  userLoading1: {fileID: 1788220523}
 --- !u!1 &74881952
 GameObject:
   m_ObjectHideFlags: 0
@@ -5835,7 +5835,7 @@ MonoBehaviour:
   m_AudioSource: {fileID: 1071466464}
   TheSlider: {fileID: 500047463}
   VolumeLevel: 1
-  userLoading1: {fileID: 0}
+  userLoading1: {fileID: 1788220523}
 --- !u!1 &1071918714
 GameObject:
   m_ObjectHideFlags: 0
@@ -6203,7 +6203,7 @@ MonoBehaviour:
   m_AudioSource: {fileID: 1134933679}
   TheSlider: {fileID: 500047463}
   VolumeLevel: 1
-  userLoading1: {fileID: 0}
+  userLoading1: {fileID: 1788220523}
 --- !u!1 &1144573175
 GameObject:
   m_ObjectHideFlags: 0
@@ -9260,12 +9260,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputUsername: 
   InputPassword: 
+  InputQuestion: 
+  InputAnswer: 
   counter: 0
   userName: {fileID: 0}
   userPassword: {fileID: 0}
+  userPasswordOBJ: {fileID: 0}
+  questionText: {fileID: 0}
+  questionTextOBJ: {fileID: 0}
+  ansewerText: {fileID: 0}
+  ansewerTextOBJ: {fileID: 0}
   newuserError: {fileID: 0}
   LogInError: {fileID: 0}
+  UserError: {fileID: 0}
   MenuChange: {fileID: 0}
+  logoutSetting: {fileID: 0}
+  userButtion: {fileID: 0}
+  passwordresetButtion: {fileID: 0}
   login: 0
 --- !u!4 &1788220524
 Transform:
@@ -10452,7 +10463,7 @@ MonoBehaviour:
   m_AudioSource: {fileID: 1966755792}
   TheSlider: {fileID: 500047463}
   VolumeLevel: 1
-  userLoading1: {fileID: 0}
+  userLoading1: {fileID: 1788220523}
 --- !u!1 &1974357494
 GameObject:
   m_ObjectHideFlags: 0

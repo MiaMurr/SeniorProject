@@ -80,9 +80,9 @@ public class SnakeLeaderBoard : MonoBehaviour
         }
         foreach (KeyValuePair<string, float> kvp in Sorted)
         {
-            Debug.Log("Key: {0}, Value: {1}" + kvp.Key + kvp.Value);
+            //Debug.Log("Key: {0}, Value: {1}" + kvp.Key + kvp.Value);
         }
-        Debug.Log($"Just Key: {Sorted.ElementAt(1).Key}");
+        //Debug.Log($"Just Key: {Sorted.ElementAt(1).Key}");
         user1.text = " " + Sorted.ElementAt(0).Key;
         HS1.text = " " + Sorted.ElementAt(0).Value;
         user2.text = " " + Sorted.ElementAt(1).Key;
@@ -105,7 +105,7 @@ public class SnakeLeaderBoard : MonoBehaviour
         HS10.text = " " + Sorted.ElementAt(9).Value;
         user11.text = " " + Sorted.ElementAt(0).Key;
         HS11.text = " " + Sorted.ElementAt(0).Value;
-        Debug.Log($"Just Value: {Sorted.ElementAt(1).Value}");
+        //Debug.Log($"Just Value: {Sorted.ElementAt(1).Value}");
     }
 
     void Start()
