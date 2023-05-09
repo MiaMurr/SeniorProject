@@ -37,7 +37,9 @@ public class userLoading : MonoBehaviour
     
     public int counter = 0;
     private bool isAUser = false;
-    
+    private bool Blank = false;
+
+
 
     public TMP_InputField userName;
     public TMP_InputField userPassword;
@@ -50,6 +52,7 @@ public class userLoading : MonoBehaviour
 
 
     public GameObject newuserError;
+    public GameObject BlankuserError;
     public GameObject LogInError;
     public GameObject UserError;
     public MenuButtionChange MenuChange;
@@ -181,6 +184,9 @@ public class userLoading : MonoBehaviour
         InputQuestion = questionText.GetComponent<TMP_InputField>().text;
         InputAnswer = ansewerText.GetComponent<TMP_InputField>().text;
 
+        newuserError.SetActive(false);
+        BlankuserError.SetActive(false);
+
         foreach (string line in File.ReadAllLines(paths))
         {
             string[] data = line.Split(';');
@@ -206,6 +212,10 @@ public class userLoading : MonoBehaviour
             {
                 isAUser = true;
             }
+            if (InputUsername == "" || InputPassword == "")
+            {
+                Blank = true;
+            }
 
             
         }
@@ -213,15 +223,21 @@ public class userLoading : MonoBehaviour
         {
             newuserError.SetActive(true);
         }
+        else if(Blank == true)
+        {
+            BlankuserError.SetActive(true);
+        }
         else
         {
             string newUser = InputUsername + ";" + InputPassword + ";1.0;1.0;w;s;a;d;0.0;0.0;0.0"+ ";" + InputQuestion + ";"+ InputAnswer;
             File.AppendAllText(paths, newUser + Environment.NewLine);
             ReadString(paths);
             MenuChange.OnMouseUpAsButton();
+            logoutSetting.logoutButtion();
 
         }
         isAUser = false;
+        Blank = false;
 
     }
     public void passwordResetQuestion()

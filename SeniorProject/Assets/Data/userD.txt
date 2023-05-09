@@ -27,7 +27,6 @@ Tanzina;Tanzina;1;1;w;s;a;d;160;0;0;;
 greenwl;professor;1;1;w;s;a;d;10;0;0;;
 jorge;Test;1;1;w;s;a;d;0;0;0;;
 jorget;Test1;1;1;w;s;a;d;410;0;0;;
-;;1.0;1.0;w;s;a;d;0.0;0.0;0.0;;
 dsf;dsf;1.0;1.0;w;s;a;d;0.0;0.0;0.0;;
 sfdvzfv;sdfszdf;1.0;1.0;w;s;a;d;0.0;0.0;0.0;;
 brandX;Henderson;1;0.5377732;w;s;a;d;210;0;0;;
@@ -37,3 +36,4 @@ GeorgeS;hunter10;1;0.12395;w;s;a;d;240;0;0;test;
 cmeriam01;test123;1;0.1437419;w;s;a;d;210;0;0;Childhood name;
 Ev;1234;1;0.1041575;w;s;a;d;10;0;0;Dogs Name;
 MalikCC;Wario12;1;0.17343;w;s;a;d;20;0;0;favorite comic?;
+qwerty;qwerty;1.0;1.0;w;s;a;d;0.0;0.0;0.0;sfs;sdfg
