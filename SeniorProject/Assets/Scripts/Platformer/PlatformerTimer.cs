@@ -66,11 +66,18 @@ public class PlatformerTimer : MonoBehaviour
             Low = PlayerPrefs.GetFloat("HighScore2");
 
             FastestMin.text = Low.ToString("0");
-            FastestMin.text = FastestMin.text.Insert(1, ":");
 
-            if (Lowestime < 960) {
 
+            if (Lowestime < 960)
+            {
+
+                FastestMin.text = FastestMin.text.Insert(1, ":");
                 FastestMin.text = FastestMin.text.Insert(0, "0");
+            }
+            else {
+
+                FastestMin.text = FastestMin.text.Insert(2, ":");
+
             }
 
             if (PlayerPrefs.GetFloat("HighScore2") == 0f)

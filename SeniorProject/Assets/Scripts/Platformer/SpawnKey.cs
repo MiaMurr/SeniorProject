@@ -21,6 +21,8 @@ public class SpawnKey : MonoBehaviour
         int Spawn10 = 0;
         int loop = 0;
 
+        KeyCollection.score = 0;
+
         while (loop != 3)
         {
             int ranNum = Random.Range(0, 10);

@@ -31,7 +31,7 @@ public class PLeaderboard : MonoBehaviour
 
 
     // use the following code also add using System.IO;
-
+   
     private string paths = "Assets/Data/userD.txt";
     void userScore()
     {
@@ -66,7 +66,7 @@ public class PLeaderboard : MonoBehaviour
 
         }
 
-        // add code here
+        
 
         //foreach (KeyValuePair<string, float> kvp in NameScore)
         //{
@@ -103,6 +103,7 @@ public class PLeaderboard : MonoBehaviour
         }
         else
         {
+            TimeV.text = string.Format("{0:##}", V1);
             TimeV.text = TimeV.text.Insert(3, ":");
         }
 
@@ -120,6 +121,7 @@ public class PLeaderboard : MonoBehaviour
         }
         else
         {
+            Time1.text = string.Format("{0:##}", T1);
             Time1.text = Time1.text.Insert(3, ":");
         }
 
@@ -138,7 +140,8 @@ public class PLeaderboard : MonoBehaviour
         }
         else
         {
-            Time2.text = Time2.text.Insert(3, ":");
+            Time2.text = string.Format("{0:##}", T2);
+            Time2.text = Time2.text.Insert(2, ":");
         }
 
         PlatUser3.text = " " + Sorted.ElementAt(2).Key;
@@ -155,7 +158,8 @@ public class PLeaderboard : MonoBehaviour
         }
         else
         {
-            Time3.text = Time3.text.Insert(3, ":");
+            Time3.text = string.Format("{0:##}", T3);
+            Time3.text = Time3.text.Insert(2, ":");
         }
 
         PlatUser4.text = " " + Sorted.ElementAt(3).Key;
@@ -173,7 +177,8 @@ public class PLeaderboard : MonoBehaviour
             
         }
         else {
-            Time4.text = Time4.text.Insert(3, ":");
+            Time4.text = string.Format("{0:##}", T4);
+            Time4.text = Time4.text.Insert(2, ":");
         }
 
         PlatUser5.text = " " + Sorted.ElementAt(4).Key;
@@ -190,7 +195,8 @@ public class PLeaderboard : MonoBehaviour
         }
         else
         {
-            Time5.text = Time5.text.Insert(3, ":");
+            Time5.text = string.Format("{0:##}", T5);
+            Time5.text = Time5.text.Insert(2, ":");
         }
         //user6.text = " " + Sorted.ElementAt(5).Key;
         //HS6.text = " " + Sorted.ElementAt(5).Value;
@@ -367,12 +373,12 @@ public class PLeaderboard : MonoBehaviour
 
         userScore();
     }
-
     void Update()
     {
-
         userScore();
 
     }
+
+
 
 }
