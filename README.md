@@ -1,6 +1,6 @@
 # SeniorProject
 created by 
 Antonio Artola,
-Mia Murrel,
+Mia Murrell,
 Dave Ardeljan,
 Sean Ramos
